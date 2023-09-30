@@ -1,5 +1,3 @@
-
-
 CREATE TABLE `school_management`.`school` (
   `student_id` INT NOT NULL AUTO_INCREMENT,
   `Session_year` INT NOT NULL,
@@ -22,4 +20,5 @@ CREATE TABLE `school_management`.`school` (
   `present_Address` VARCHAR(200) NULL,
   `permanent_Address` VARCHAR(200) NULL,
   `picture` BLOB NULL;
-   ADD PRIMARY KEY (`student_id`);
+   ADD PRIMARY KEY (`student_id`));
+
