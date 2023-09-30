@@ -1,1 +1,21 @@
-
+CREATE TABLE `school_manage`.`presonal_info` (
+  `session_year` YEAR NOT NULL,
+  `batch_id` VARCHAR(45) NOT NULL,
+  `student_id` INT NOT NULL,
+  `class` VARCHAR(45) NULL,
+  `full_name` VARCHAR(45) NOT NULL,
+  `fathers_name` VARCHAR(45) NOT NULL,
+  `father_phone` VARCHAR(45) NULL,
+  `mothers_name` VARCHAR(45) NOT NULL,
+  `mother_phone` VARCHAR(45) NULL,
+  `dob` DATE NULL,
+  `age` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NOT NULL,
+  `religion` VARCHAR(45) NULL,
+  `nationallity` VARCHAR(45) NULL,
+  `persent_Address` VARCHAR(200) NULL,
+  `parmanent_Address` VARCHAR(200) NULL,
+  `picture` BLOB NULL,
+  `birth_cretificate` INT NULL,
+  `blood` VARCHAR(45) NULL,
+  PRIMARY KEY (`session_year`));
