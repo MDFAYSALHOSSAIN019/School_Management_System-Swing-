@@ -42,5 +42,33 @@ CREATE TABLE `school_management`.`resultsheet` (
   `avarageMark` FLOAT(5, 2) NULL,
   `g_p_a` FLOAT(5, 2) NULL,
   `grade` VARCHAR(45) NULL,
+    `passFail` VARCHAR(45) NULL,
     examCatagory varchar(45),
   PRIMARY KEY (`serial_No`));
+
+Payment table-----------------------------------------------------------
+
+CREATE TABLE `school_management`.`payment` (
+  `payment_id` INT NOT NULL AUTO_INCREMENT,
+  `session` INT NOT NULL,
+  `batch_id` VARCHAR(45) NOT NULL,
+  `class` VARCHAR(45) NOT NULL,
+  `roll` INT NOT NULL,
+  `jan` INT NULL,
+  `feb` INT NULL,
+  `mar` INT NULL,
+  `apr` INT NULL,
+  `may` INT NULL,
+  `june` INT NULL,
+  `july` INT NULL,
+  `aug` INT NULL,
+  `sep` INT NULL,
+  `oct` INT NULL,
+  `nov` INT NULL,
+  `dec` INT NULL,
+  `examPayment` INT NULL,
+  `admisionFee` INT NULL,
+  `totalPay` INT NULL,
+  `examcatagory` INT NULL,
+  `date` INT NOT NULL,
+  PRIMARY KEY (`payment_id`));

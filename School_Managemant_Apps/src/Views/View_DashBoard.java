@@ -6,7 +6,13 @@ package Views;
 
 import dataBaseConnection.DataBaseConnection;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 import java.io.File;
 import java.io.FileInputStream;
 import java.sql.PreparedStatement;
@@ -38,7 +44,42 @@ public class View_DashBoard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         studentTable();
         resultTable();
+//        TotalStudentReport_6();
+//        TotalStudentReport_7();
+//        TotalStudentReport_8();
+//        TotalStudentReport_9();
+//        TotalStudentReport_10();
+//        TotalPassReport_6();
+//        TotalFailReport_6();
+//        TotalPassReport_7();
+//        TotalFailReport_7();
+//        TotalPassReport_8();
+//        TotalFailReport_8();
+//        TotalPassReport_9();
+//        TotalFailReport_9();
+//        TotalPassReport_10();
+//        TotalFailReport_10();
+        AllMethods();
 //        getClassTocomboFromStudentTable();
+    }
+
+    public void AllMethods() {
+        TotalStudentReport_6();
+        TotalStudentReport_7();
+        TotalStudentReport_8();
+        TotalStudentReport_9();
+        TotalStudentReport_10();
+        TotalPassReport_6();
+        TotalFailReport_6();
+        TotalPassReport_7();
+        TotalFailReport_7();
+        TotalPassReport_8();
+        TotalFailReport_8();
+        TotalPassReport_9();
+        TotalFailReport_9();
+        TotalPassReport_10();
+        TotalFailReport_10();
+
     }
     DataBaseConnection con = new DataBaseConnection();
     PreparedStatement ps;
@@ -242,6 +283,29 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     }
 
+    public void resultShowReset() {
+        rs_bangla.setText("");
+        rs_english.setText("");
+        rs_math.setText("");
+        rs_scince.setText("");
+        rs_social.setText("");
+        rs_islam.setText("");
+        rs_total.setText("");
+        rs_gpa.setText("");
+
+        rs_catagory.setText("");
+        rs_roll.setText("");
+        rs_name.setText("");
+        rs_batch.setText("");
+        rs_session.setText("");
+        rs_class.setText("");
+
+        rs_input_class.setSelectedIndex(0);  // Assuming rs_input_class is a JComboBox
+        rs_input_batch.setText("");
+        rs_input_roll.setText("");
+        rs_input_session.setText("");
+    }
+
 //    print panal method-----------------------------------------------------------------
 //    public static void printPanel(JPanel panel) {
 //        PrinterJob printerJob = PrinterJob.getPrinterJob();
@@ -298,9 +362,37 @@ public class View_DashBoard extends javax.swing.JFrame {
         homePanal = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        d_10_fail = new javax.swing.JLabel();
+        d_6_pass = new javax.swing.JLabel();
+        d_6_fail = new javax.swing.JLabel();
+        d_7_pass = new javax.swing.JLabel();
+        d_8_pass = new javax.swing.JLabel();
+        d_7_fail = new javax.swing.JLabel();
+        d_8_fail = new javax.swing.JLabel();
+        d_9_pass = new javax.swing.JLabel();
+        d_9_fail = new javax.swing.JLabel();
+        d_10_pass = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        d_class_10 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        d_class_6 = new javax.swing.JLabel();
+        d_class_7 = new javax.swing.JLabel();
+        d_class_8 = new javax.swing.JLabel();
+        d_class_9 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel99 = new javax.swing.JLabel();
@@ -386,7 +478,7 @@ public class View_DashBoard extends javax.swing.JFrame {
         btn_sd_View_ = new javax.swing.JButton();
         sd_session = new javax.swing.JTextField();
         jPanel17 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
+        Student_details_panal = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -424,9 +516,9 @@ public class View_DashBoard extends javax.swing.JFrame {
         sd_gender_combo = new javax.swing.JLabel();
         btn_sd_delete_ = new javax.swing.JButton();
         btn_sd_View1_ = new javax.swing.JButton();
-        btn_sd_update_ = new javax.swing.JButton();
         btn_sd_Reset = new javax.swing.JButton();
         jLabel115 = new javax.swing.JLabel();
+        btn_sd_Print_ = new javax.swing.JButton();
         St_Result_input = new javax.swing.JTabbedPane();
         jPanel20 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
@@ -440,31 +532,9 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         r_class = new javax.swing.JComboBox<>();
         jPanel26 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        r_grade = new javax.swing.JTextField();
-        r_bangla = new javax.swing.JTextField();
-        r_english = new javax.swing.JTextField();
-        r_math = new javax.swing.JTextField();
-        r_scince = new javax.swing.JTextField();
-        r_social = new javax.swing.JTextField();
-        r_islam = new javax.swing.JTextField();
-        r_total = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         tableResultInput = new javax.swing.JTable();
-        jLabel56 = new javax.swing.JLabel();
-        r_avarage = new javax.swing.JTextField();
-        jLabel57 = new javax.swing.JLabel();
-        r_gpa = new javax.swing.JTextField();
         r_date = new com.toedter.calendar.JDateChooser();
-        jLabel116 = new javax.swing.JLabel();
-        r_examSelect = new javax.swing.JComboBox<>();
         r_Serial = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
         jPanel54 = new javax.swing.JPanel();
@@ -472,23 +542,49 @@ public class View_DashBoard extends javax.swing.JFrame {
         btn_R_Reset = new javax.swing.JButton();
         btn_R_update = new javax.swing.JButton();
         btn_R_Delete = new javax.swing.JButton();
+        btn_R_RollBack_ = new javax.swing.JButton();
         jLabel117 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        r_bangla = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        r_examSelect = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        r_english = new javax.swing.JTextField();
+        r_math = new javax.swing.JTextField();
+        r_scince = new javax.swing.JTextField();
+        r_social = new javax.swing.JTextField();
+        r_islam = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        r_total = new javax.swing.JTextField();
+        r_avarage = new javax.swing.JTextField();
+        jLabel56 = new javax.swing.JLabel();
+        r_gpa = new javax.swing.JTextField();
+        jLabel57 = new javax.swing.JLabel();
+        r_grade = new javax.swing.JTextField();
+        jLabel68 = new javax.swing.JLabel();
+        r_passFail = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         St_Result_Print = new javax.swing.JTabbedPane();
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jPanel24 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        rs_input_session = new javax.swing.JTextField();
         jLabel59 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        rs_input_roll = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jButton12 = new javax.swing.JButton();
-        jPanel31 = new javax.swing.JPanel();
+        rs_input_batch = new javax.swing.JTextField();
+        btn_rs_View_ = new javax.swing.JButton();
+        rs_input_class = new javax.swing.JComboBox<>();
+        Result_sheet_panal = new javax.swing.JPanel();
         jPanel35 = new javax.swing.JPanel();
-        jLabel72 = new javax.swing.JLabel();
+        rsg_gpa = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
         jLabel75 = new javax.swing.JLabel();
@@ -500,41 +596,44 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        tableGrade = new javax.swing.JTable();
+        rs_bangla = new javax.swing.JLabel();
+        rs_english = new javax.swing.JLabel();
+        rs_math = new javax.swing.JLabel();
+        rs_scince = new javax.swing.JLabel();
+        rs_social = new javax.swing.JLabel();
+        rs_islam = new javax.swing.JLabel();
+        rs_total = new javax.swing.JLabel();
+        rs_gpa = new javax.swing.JLabel();
+        rsg_bangla = new javax.swing.JLabel();
+        rsg_english = new javax.swing.JLabel();
+        rsg_math = new javax.swing.JLabel();
+        rsg_scince = new javax.swing.JLabel();
+        rsg_social = new javax.swing.JLabel();
+        rsg_islam = new javax.swing.JLabel();
+        rsg_total = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
+        rs_name = new javax.swing.JLabel();
+        rs_catagory = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
+        rs_session = new javax.swing.JLabel();
+        rs_roll = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
         jLabel71 = new javax.swing.JLabel();
         jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
+        rs_class = new javax.swing.JLabel();
+        rs_batch = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        rs_PassFail = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jPanel33 = new javax.swing.JPanel();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
+        btn_rs_Reset_ = new javax.swing.JButton();
+        btn_Result_sheet_panal_Print_ = new javax.swing.JButton();
         jPanel34 = new javax.swing.JPanel();
         TeacherTab = new javax.swing.JTabbedPane();
         Te_home = new javax.swing.JTabbedPane();
@@ -610,31 +709,52 @@ public class View_DashBoard extends javax.swing.JFrame {
         jPanel50 = new javax.swing.JPanel();
         jPanel51 = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jPanel52 = new javax.swing.JPanel();
+        paymentStudentTable = new javax.swing.JTable();
         jPanel53 = new javax.swing.JPanel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        pay_st_Date = new com.toedter.calendar.JDateChooser();
         jLabel103 = new javax.swing.JLabel();
         jLabel106 = new javax.swing.JLabel();
         jLabel107 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
         jLabel110 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        pay_st_Roll = new javax.swing.JTextField();
+        pay_st_id = new javax.swing.JTextField();
+        pay_st_TotalFee = new javax.swing.JTextField();
+        pay_st_current_month = new javax.swing.JComboBox<>();
+        pay_st_class_combo = new javax.swing.JComboBox<>();
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jTextField22 = new javax.swing.JTextField();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
+        pay_st_catagory = new javax.swing.JComboBox<>();
+        pay_st_batch = new javax.swing.JTextField();
+        jLabel121 = new javax.swing.JLabel();
+        pay_st_session = new javax.swing.JTextField();
+        jLabel122 = new javax.swing.JLabel();
+        pay_st_admision = new javax.swing.JTextField();
+        jLabel125 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        pay_st_exam_fee = new javax.swing.JTextField();
+        pay_st_Mon_july = new javax.swing.JCheckBox();
+        pay_st_Mon_jan = new javax.swing.JCheckBox();
+        pay_st_Mon_feb = new javax.swing.JCheckBox();
+        pay_st_Mon_aug = new javax.swing.JCheckBox();
+        pay_st_Mon_mar = new javax.swing.JCheckBox();
+        pay_st_Mon_sep = new javax.swing.JCheckBox();
+        pay_st_Mon_may = new javax.swing.JCheckBox();
+        pay_st_Mon_nov = new javax.swing.JCheckBox();
+        pay_st_Mon_apr = new javax.swing.JCheckBox();
+        pay_st_Mon_dec = new javax.swing.JCheckBox();
+        pay_st_Mon_june = new javax.swing.JCheckBox();
+        pay_st_Mon_Oct = new javax.swing.JCheckBox();
+        pay_st_cruntAmount = new javax.swing.JTextField();
+        jLabel127 = new javax.swing.JLabel();
+        btn_st_pay_print = new javax.swing.JButton();
+        btn_st_pay_AddCurt_ = new javax.swing.JButton();
+        btn_st_pay_save_ = new javax.swing.JButton();
+        btn_st_pay_reset = new javax.swing.JButton();
+        btn_st_pay_update = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        Payment_student_ = new javax.swing.JTextArea();
         Staff = new javax.swing.JTabbedPane();
         Staff_Home = new javax.swing.JTabbedPane();
         Staff_Add = new javax.swing.JTabbedPane();
@@ -668,10 +788,15 @@ public class View_DashBoard extends javax.swing.JFrame {
         optionPanal.setBackground(new java.awt.Color(153, 255, 204));
         optionPanal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnHome.setBackground(new java.awt.Color(204, 255, 204));
         btnHome.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
-        btnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/home (1)_1.png"))); // NOI18N
+        btnHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/home.png"))); // NOI18N
         btnHome.setText("  HOME");
-        btnHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 2));
+        btnHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnHome.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnHome.setMaximumSize(new java.awt.Dimension(131, 31));
+        btnHome.setMinimumSize(new java.awt.Dimension(131, 31));
+        btnHome.setPreferredSize(new java.awt.Dimension(131, 31));
         btnHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnHomeMouseClicked(evt);
@@ -685,67 +810,126 @@ public class View_DashBoard extends javax.swing.JFrame {
         });
         optionPanal.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 160, 40));
 
+        btnStudent.setBackground(new java.awt.Color(204, 255, 204));
         btnStudent.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
         btnStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/graduated.png"))); // NOI18N
         btnStudent.setText("STUDENT");
+        btnStudent.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnStudent.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnStudent.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnStudentMouseClicked(evt);
             }
-        });
-        btnStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStudentActionPerformed(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnStudentMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnStudentMouseExited(evt);
             }
         });
         optionPanal.add(btnStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 160, 40));
 
+        btnTeacher.setBackground(new java.awt.Color(204, 255, 204));
         btnTeacher.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
-        btnTeacher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/teaching.png"))); // NOI18N
-        btnTeacher.setText("  TEACHER");
+        btnTeacher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/teacherupdate (2).png"))); // NOI18N
+        btnTeacher.setText("TEACHER");
+        btnTeacher.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnTeacher.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnTeacher.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnTeacherMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnTeacherMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnTeacherMouseExited(evt);
+            }
+        });
+        btnTeacher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTeacherActionPerformed(evt);
+            }
         });
         optionPanal.add(btnTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 160, 40));
 
+        btnExam.setBackground(new java.awt.Color(204, 255, 204));
         btnExam.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
         btnExam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/exam.png"))); // NOI18N
-        btnExam.setText("    EXAM");
+        btnExam.setText("EXAM");
+        btnExam.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnExam.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnExam.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnExamMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnExamMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnExamMouseExited(evt);
+            }
         });
         optionPanal.add(btnExam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 160, 40));
 
+        btnPayment.setBackground(new java.awt.Color(204, 255, 204));
         btnPayment.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
         btnPayment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/bill.png"))); // NOI18N
-        btnPayment.setText(" PAYMENT");
+        btnPayment.setText("PAYMENT");
+        btnPayment.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnPayment.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnPayment.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnPaymentMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPaymentMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPaymentMouseExited(evt);
+            }
+        });
+        btnPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaymentActionPerformed(evt);
+            }
         });
         optionPanal.add(btnPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 160, 40));
 
+        exitTab.setBackground(new java.awt.Color(204, 255, 204));
         exitTab.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
-        exitTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/teamwork.png"))); // NOI18N
+        exitTab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/cross.png"))); // NOI18N
         exitTab.setText("Exit");
+        exitTab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        exitTab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         exitTab.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitTabMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitTabMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitTabMouseExited(evt);
+            }
         });
         optionPanal.add(exitTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 160, 40));
 
+        btnStaff1.setBackground(new java.awt.Color(204, 255, 204));
         btnStaff1.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 16)); // NOI18N
-        btnStaff1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/teamwork.png"))); // NOI18N
-        btnStaff1.setText("  STAFF");
+        btnStaff1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/staffs.png"))); // NOI18N
+        btnStaff1.setText("STAFF");
+        btnStaff1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnStaff1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnStaff1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnStaff1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnStaff1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnStaff1MouseExited(evt);
             }
         });
         optionPanal.add(btnStaff1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 160, 40));
@@ -763,35 +947,165 @@ public class View_DashBoard extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(204, 255, 204));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 230, 80));
+
+        jLabel86.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel86.setText("Result Summary");
+        jPanel5.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 30));
+
+        jLabel87.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel87.setText("Class - 6");
+        jPanel5.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 90, 20));
+
+        jLabel88.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel88.setText("Class - 7");
+        jPanel5.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 90, 20));
+
+        jLabel89.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel89.setText("Class - 8");
+        jPanel5.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 90, 20));
+
+        jLabel90.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel90.setText("Class - 9");
+        jPanel5.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 90, 20));
+
+        jLabel91.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel91.setText("Class - 10");
+        jPanel5.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 100, 20));
+
+        jLabel92.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel92.setText("Fail");
+        jPanel5.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 40, -1));
+
+        jLabel93.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel93.setText("Pass");
+        jPanel5.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 50, -1));
+
+        d_10_fail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_10_fail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_10_fail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_10_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 50, 20));
+
+        d_6_pass.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_6_pass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_6_pass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_6_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 50, 20));
+
+        d_6_fail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_6_fail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_6_fail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_6_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 50, 20));
+
+        d_7_pass.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_7_pass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_7_pass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_7_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 50, 20));
+
+        d_8_pass.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_8_pass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_8_pass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_8_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 50, 20));
+
+        d_7_fail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_7_fail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_7_fail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_7_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 50, 20));
+
+        d_8_fail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_8_fail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_8_fail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_8_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 50, 20));
+
+        d_9_pass.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_9_pass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_9_pass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_9_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 50, 20));
+
+        d_9_fail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_9_fail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_9_fail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_9_fail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 50, 20));
+
+        d_10_pass.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_10_pass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_10_pass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.add(d_10_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 50, 20));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 230, 210));
 
         jPanel6.setBackground(new java.awt.Color(204, 255, 204));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 470, 230, 90));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 230, 120));
 
         jPanel7.setBackground(new java.awt.Color(204, 255, 204));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 230, 80));
 
-        jPanel8.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 230, 80));
+        jLabel64.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel64.setText("Student Count");
+        jPanel7.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 30));
+
+        jLabel65.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel65.setText("Class - 10");
+        jPanel7.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 100, 20));
+
+        d_class_10.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_class_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_class_10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(d_class_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 90, 20));
+
+        jLabel69.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel69.setText("Class - 7");
+        jPanel7.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 90, 20));
+
+        jLabel72.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel72.setText("Class - 8");
+        jPanel7.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 90, 20));
+
+        jLabel84.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel84.setText("Class - 9");
+        jPanel7.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 90, 20));
+
+        jLabel85.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel85.setText("Class - 6");
+        jPanel7.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 90, 20));
+
+        d_class_6.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_class_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_class_6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(d_class_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 90, 20));
+
+        d_class_7.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_class_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_class_7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(d_class_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 90, 20));
+
+        d_class_8.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_class_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_class_8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(d_class_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 90, 20));
+
+        d_class_9.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        d_class_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d_class_9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(d_class_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 90, 20));
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 230, 180));
 
         jPanel9.setBackground(new java.awt.Color(204, 255, 204));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, 230, 80));
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 230, 210));
 
         jPanel10.setBackground(new java.awt.Color(204, 255, 204));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, 230, 80));
+        jPanel1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 230, 120));
 
         jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/rsz_dashboard.jpg"))); // NOI18N
-        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1000, 570));
+        jPanel1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 990, 590));
 
         homePanal.addTab("tab1", jPanel1);
 
@@ -812,65 +1126,89 @@ public class View_DashBoard extends javax.swing.JFrame {
         });
         st_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        St_btn_addmition.setBackground(new java.awt.Color(204, 204, 204));
+        St_btn_addmition.setBackground(new java.awt.Color(204, 204, 255));
         St_btn_addmition.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         St_btn_addmition.setText("ADMITION");
         St_btn_addmition.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 St_btn_addmitionMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                St_btn_addmitionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                St_btn_addmitionMouseExited(evt);
+            }
         });
-        st_1.add(St_btn_addmition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        st_1.add(St_btn_addmition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 70));
 
-        jPanel13.add(st_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 160, 90));
+        jPanel13.add(st_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, 170, 90));
 
         st_2.setBackground(new java.awt.Color(204, 255, 204));
         st_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         st_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        St_btn_Deatils.setBackground(new java.awt.Color(204, 204, 204));
+        St_btn_Deatils.setBackground(new java.awt.Color(204, 204, 255));
         St_btn_Deatils.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         St_btn_Deatils.setText("Information");
         St_btn_Deatils.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 St_btn_DeatilsMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                St_btn_DeatilsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                St_btn_DeatilsMouseExited(evt);
+            }
         });
-        st_2.add(St_btn_Deatils, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        st_2.add(St_btn_Deatils, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 70));
 
-        jPanel13.add(st_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, 160, 90));
+        jPanel13.add(st_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 120, 170, 90));
 
         st_3.setBackground(new java.awt.Color(204, 255, 204));
         st_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         st_3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        st_btn_result_in.setBackground(new java.awt.Color(204, 204, 204));
+        st_btn_result_in.setBackground(new java.awt.Color(204, 204, 255));
         st_btn_result_in.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         st_btn_result_in.setText("RESULT INPUT");
         st_btn_result_in.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 st_btn_result_inMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                st_btn_result_inMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                st_btn_result_inMouseExited(evt);
+            }
         });
-        st_3.add(st_btn_result_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        st_3.add(st_btn_result_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 70));
 
-        jPanel13.add(st_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 220, 160, 90));
+        jPanel13.add(st_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 170, 90));
 
         St_4.setBackground(new java.awt.Color(204, 255, 204));
         St_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         St_4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        st_btn_result_out.setBackground(new java.awt.Color(204, 204, 204));
+        st_btn_result_out.setBackground(new java.awt.Color(204, 204, 255));
         st_btn_result_out.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         st_btn_result_out.setText("REAULT SHOW");
         st_btn_result_out.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 st_btn_result_outMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                st_btn_result_outMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                st_btn_result_outMouseExited(evt);
+            }
         });
-        St_4.add(st_btn_result_out, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        St_4.add(st_btn_result_out, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, 70));
 
-        jPanel13.add(St_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, 160, 90));
+        jPanel13.add(St_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 170, 90));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/studentdashboards (2).jpg"))); // NOI18N
         jPanel13.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 570));
@@ -1178,7 +1516,7 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel44.setText("Class");
         jPanel16.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 50, 30));
 
-        sd_studentID.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        sd_studentID.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jPanel16.add(sd_studentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 120, 30));
 
         jLabel51.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1186,13 +1524,19 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel51.setText("Batch id");
         jPanel16.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 80, 30));
 
-        sd_batchId.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        sd_batchId.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jPanel16.add(sd_batchId, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 110, 30));
 
         btn_sd_View_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         btn_sd_View_.setText("View");
+        btn_sd_View_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_sd_View_MouseClicked(evt);
+            }
+        });
         jPanel16.add(btn_sd_View_, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 110, 30));
 
+        sd_session.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         sd_session.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sd_sessionMouseClicked(evt);
@@ -1205,120 +1549,120 @@ public class View_DashBoard extends javax.swing.JFrame {
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Student Information", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Fax", 1, 12))); // NOI18N
-        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Student_details_panal.setBackground(new java.awt.Color(255, 255, 255));
+        Student_details_panal.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Student Information", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Fax", 1, 12))); // NOI18N
+        Student_details_panal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/st_1.png"))); // NOI18N
         jPanel19.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 170));
 
-        jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 170));
+        Student_details_panal.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 170));
 
         jLabel32.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel32.setText("Birth Cer.No");
-        jPanel18.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 110, 30));
+        Student_details_panal.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 110, 30));
 
         jLabel33.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel33.setText("Full Name");
-        jPanel18.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 30));
+        Student_details_panal.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 30));
 
         jLabel34.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel34.setText("Father's Name");
-        jPanel18.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 130, 30));
+        Student_details_panal.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 130, 30));
 
         jLabel35.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel35.setText("Mother's Name");
-        jPanel18.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 140, 30));
+        Student_details_panal.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 140, 30));
 
         jLabel36.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel36.setText("Phone Number");
-        jPanel18.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 140, 30));
+        Student_details_panal.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 140, 30));
 
         jLabel38.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel38.setText("Date Of Birth");
-        jPanel18.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 140, 30));
+        Student_details_panal.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 140, 30));
 
         jLabel39.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel39.setText("Age");
-        jPanel18.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 140, 30));
+        Student_details_panal.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 140, 30));
 
         jLabel40.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel40.setText("Religion");
-        jPanel18.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 80, 30));
+        Student_details_panal.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 80, 30));
 
         jLabel41.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel41.setText("Nationality");
-        jPanel18.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, 30));
+        Student_details_panal.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, 30));
 
         jLabel45.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel45.setText("Phone Number");
-        jPanel18.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 140, 30));
+        Student_details_panal.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 140, 30));
 
         jLabel46.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel46.setText("Email");
-        jPanel18.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 50, 30));
+        Student_details_panal.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 50, 30));
 
         jLabel47.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel47.setText("Present Addess");
-        jPanel18.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 140, 30));
+        Student_details_panal.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 140, 30));
 
         jLabel48.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel48.setText("Parmanent Address");
-        jPanel18.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, 30));
+        Student_details_panal.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, 30));
 
         jLabel49.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
         jLabel49.setText("Blood Group");
-        jPanel18.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 110, 30));
+        Student_details_panal.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 110, 30));
 
         sd_birth_cer.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_birth_cer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_birth_cer, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 170, 200, 30));
+        Student_details_panal.add(sd_birth_cer, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 170, 200, 30));
 
         sd_fullName.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_fullName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 190, 30));
+        Student_details_panal.add(sd_fullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 190, 30));
 
         sd_fatherName.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_fatherName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_fatherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 190, 30));
+        Student_details_panal.add(sd_fatherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 190, 30));
 
         sd_Father_phone.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_Father_phone.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_Father_phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 190, 30));
+        Student_details_panal.add(sd_Father_phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 190, 30));
 
         sd_motherName.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_motherName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_motherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 190, 30));
+        Student_details_panal.add(sd_motherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 190, 30));
 
         sd_motherPhone.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_motherPhone.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_motherPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 190, 30));
+        Student_details_panal.add(sd_motherPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 190, 30));
 
         sd_Dob.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_Dob.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_Dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 190, 30));
+        Student_details_panal.add(sd_Dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 190, 30));
 
         sd_Age.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_Age.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_Age, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 190, 30));
+        Student_details_panal.add(sd_Age, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 190, 30));
 
         sd_religion.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_religion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_religion, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 10, 200, 30));
+        Student_details_panal.add(sd_religion, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 10, 200, 30));
 
         sd_nationality.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_nationality.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_nationality, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, 200, 30));
+        Student_details_panal.add(sd_nationality, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, 200, 30));
 
         sd_blood.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_blood.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_blood, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 90, 200, 30));
+        Student_details_panal.add(sd_blood, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 90, 200, 30));
 
         sd_email.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         sd_email.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel18.add(sd_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 130, 200, 30));
+        Student_details_panal.add(sd_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 130, 200, 30));
 
         sd_parmanentA.setColumns(20);
         sd_parmanentA.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
@@ -1326,7 +1670,7 @@ public class View_DashBoard extends javax.swing.JFrame {
         sd_parmanentA.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(sd_parmanentA);
 
-        jPanel18.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 570, 30));
+        Student_details_panal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 570, 30));
 
         sd_presentA.setColumns(20);
         sd_presentA.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
@@ -1334,9 +1678,9 @@ public class View_DashBoard extends javax.swing.JFrame {
         sd_presentA.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane4.setViewportView(sd_presentA);
 
-        jPanel18.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 570, 30));
+        Student_details_panal.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 570, 30));
 
-        jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 940, 390));
+        jPanel17.add(Student_details_panal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 940, 390));
 
         sd_class_view.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         sd_class_view.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1356,7 +1700,12 @@ public class View_DashBoard extends javax.swing.JFrame {
 
         btn_sd_delete_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         btn_sd_delete_.setText("Delete");
-        jPanel17.add(btn_sd_delete_, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 220, 40));
+        btn_sd_delete_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_sd_delete_MouseClicked(evt);
+            }
+        });
+        jPanel17.add(btn_sd_delete_, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 440, 220, 40));
 
         btn_sd_View1_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         btn_sd_View1_.setText("View");
@@ -1372,15 +1721,6 @@ public class View_DashBoard extends javax.swing.JFrame {
         });
         jPanel17.add(btn_sd_View1_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 230, 40));
 
-        btn_sd_update_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        btn_sd_update_.setText("Update");
-        btn_sd_update_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sd_update_ActionPerformed(evt);
-            }
-        });
-        jPanel17.add(btn_sd_update_, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 230, 40));
-
         btn_sd_Reset.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         btn_sd_Reset.setText("Reset");
         btn_sd_Reset.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1388,11 +1728,25 @@ public class View_DashBoard extends javax.swing.JFrame {
                 btn_sd_ResetMouseClicked(evt);
             }
         });
-        jPanel17.add(btn_sd_Reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 440, 230, 40));
+        jPanel17.add(btn_sd_Reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 440, 230, 40));
 
         jLabel115.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jLabel115.setText("Class-");
         jPanel17.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, -1, 40));
+
+        btn_sd_Print_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_sd_Print_.setText("Print");
+        btn_sd_Print_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_sd_Print_MouseClicked(evt);
+            }
+        });
+        btn_sd_Print_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sd_Print_ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(btn_sd_Print_, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 230, 40));
 
         jPanel15.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 970, 500));
 
@@ -1404,6 +1758,11 @@ public class View_DashBoard extends javax.swing.JFrame {
 
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
         jPanel21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel21MouseClicked(evt);
+            }
+        });
         jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel25.setBackground(new java.awt.Color(204, 204, 204));
@@ -1417,6 +1776,11 @@ public class View_DashBoard extends javax.swing.JFrame {
         r_session.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         r_session.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         r_session.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        r_session.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                r_sessionKeyReleased(evt);
+            }
+        });
         jPanel25.add(r_session, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 150, 40));
 
         jLabel53.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1454,115 +1818,6 @@ public class View_DashBoard extends javax.swing.JFrame {
         jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel21.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 30, 470));
 
-        jLabel4.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel4.setText("Grade");
-        jPanel21.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 160, 30));
-
-        jLabel5.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel5.setText("Bangla");
-        jPanel21.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 140, 30));
-
-        jLabel10.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel10.setText("English");
-        jPanel21.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 140, 30));
-
-        jLabel12.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel12.setText("Genarel Math");
-        jPanel21.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 140, 30));
-
-        jLabel30.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel30.setText("Genarel Scince");
-        jPanel21.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 150, 30));
-
-        jLabel31.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel31.setText("Social Scince");
-        jPanel21.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 140, 30));
-
-        jLabel37.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel37.setText("Islam");
-        jPanel21.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 140, 30));
-
-        jLabel50.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel50.setText("Total Number");
-        jPanel21.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 140, 30));
-
-        r_grade.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_grade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_grade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_gradeActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_grade, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 160, 30));
-
-        r_bangla.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_bangla.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_bangla.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_banglaActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_bangla, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 160, 30));
-
-        r_english.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_english.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_english.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_englishActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_english, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 160, 30));
-
-        r_math.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_math.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_math.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_mathActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_math, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 160, 30));
-
-        r_scince.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_scince.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_scince.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_scinceActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_scince, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 160, 30));
-
-        r_social.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_social.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_social.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_socialActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_social, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 160, 30));
-
-        r_islam.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_islam.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_islam.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                r_islamFocusLost(evt);
-            }
-        });
-        r_islam.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_islamActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_islam, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 160, 30));
-
-        r_total.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_total.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_total.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_totalActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 160, 30));
-
         tableResultInput.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1581,44 +1836,10 @@ public class View_DashBoard extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(tableResultInput);
 
-        jPanel21.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 880, 210));
-
-        jLabel56.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel56.setText("Avarage number");
-        jPanel21.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 160, 30));
-
-        r_avarage.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_avarage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_avarage.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_avarageActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_avarage, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 160, 30));
-
-        jLabel57.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel57.setText("G.P.A");
-        jPanel21.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 160, 30));
-
-        r_gpa.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        r_gpa.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        r_gpa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r_gpaActionPerformed(evt);
-            }
-        });
-        jPanel21.add(r_gpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 160, 30));
+        jPanel21.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 880, 180));
 
         r_date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel21.add(r_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 80, 120, 30));
-
-        jLabel116.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel116.setText("Exam Catagory");
-        jPanel21.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 150, 30));
-
-        r_examSelect.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        r_examSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Exam", "Half_Yearly", "Final" }));
-        jPanel21.add(r_examSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 160, 30));
+        jPanel21.add(r_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 80, 160, 30));
 
         r_Serial.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         r_Serial.setText("0000");
@@ -1677,12 +1898,198 @@ public class View_DashBoard extends javax.swing.JFrame {
         });
         jPanel54.add(btn_R_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, 30));
 
-        jPanel21.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 160, 180));
+        btn_R_RollBack_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_R_RollBack_.setText("Roll Back");
+        btn_R_RollBack_.setBorder(new javax.swing.border.MatteBorder(null));
+        btn_R_RollBack_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_R_RollBack_MouseClicked(evt);
+            }
+        });
+        jPanel54.add(btn_R_RollBack_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 140, 30));
+
+        jPanel21.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 160, 220));
 
         jLabel117.setFont(new java.awt.Font("Engravers MT", 1, 18)); // NOI18N
         jLabel117.setForeground(new java.awt.Color(255, 102, 102));
         jLabel117.setText("Student  Result   Table");
-        jPanel21.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 350, 30));
+        jPanel21.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 370, 30));
+
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        r_bangla.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_bangla.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_bangla.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_bangla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_banglaActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_bangla, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 160, 30));
+
+        jLabel5.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel5.setText("Bangla");
+        jPanel8.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 30));
+
+        jLabel116.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel116.setText("Exam Catagory");
+        jPanel8.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 150, 30));
+
+        r_examSelect.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        r_examSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Exam", "Half_Yearly", "Final" }));
+        jPanel8.add(r_examSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 160, 30));
+
+        jLabel10.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel10.setText("English");
+        jPanel8.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 140, 30));
+
+        r_english.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_english.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_english.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_english.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_englishActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_english, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 160, 30));
+
+        r_math.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_math.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_math.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_math.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_mathActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_math, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 160, 30));
+
+        r_scince.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_scince.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_scince.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_scince.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_scinceActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_scince, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 160, 30));
+
+        r_social.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_social.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_social.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_social.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_socialActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_social, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 160, 30));
+
+        r_islam.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_islam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_islam.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_islam.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                r_islamFocusLost(evt);
+            }
+        });
+        r_islam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_islamActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_islam, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 160, 30));
+
+        jLabel12.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel12.setText("Genarel Math");
+        jPanel8.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 30));
+
+        jLabel30.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel30.setText("Genarel Scince");
+        jPanel8.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 150, 30));
+
+        jLabel31.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel31.setText("Social Scince");
+        jPanel8.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 140, 30));
+
+        jLabel37.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel37.setText("Islam");
+        jPanel8.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 140, 30));
+
+        jLabel50.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel50.setText("Total Number");
+        jPanel8.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 140, 30));
+
+        r_total.setEditable(false);
+        r_total.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_total.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_total.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_total.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_totalActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 160, 30));
+
+        r_avarage.setEditable(false);
+        r_avarage.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_avarage.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_avarage.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_avarage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_avarageActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_avarage, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 160, 30));
+
+        jLabel56.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel56.setText("Avarage number");
+        jPanel8.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 160, 30));
+
+        r_gpa.setEditable(false);
+        r_gpa.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_gpa.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_gpa.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_gpa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_gpaActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_gpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 160, 30));
+
+        jLabel57.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel57.setText("G.P.A");
+        jPanel8.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 160, 30));
+
+        r_grade.setEditable(false);
+        r_grade.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_grade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_grade.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_grade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_gradeActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_grade, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 160, 30));
+
+        jLabel68.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel68.setText("Grade");
+        jPanel8.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 160, 30));
+
+        r_passFail.setEditable(false);
+        r_passFail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        r_passFail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        r_passFail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        r_passFail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r_passFailActionPerformed(evt);
+            }
+        });
+        jPanel8.add(r_passFail, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 160, 30));
+
+        jLabel4.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabel4.setText("Result");
+        jPanel8.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 160, 30));
+
+        jPanel21.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 710, 250));
 
         jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 970, 560));
 
@@ -1701,25 +2108,25 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel58.setText("Session");
         jPanel24.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, 30));
 
-        jTextField15.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        rs_input_session.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        rs_input_session.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                rs_input_sessionActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 90, 30));
+        jPanel24.add(rs_input_session, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 90, 30));
 
         jLabel59.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jLabel59.setText("Student Roll");
         jPanel24.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, 30));
 
-        jTextField16.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        rs_input_roll.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        rs_input_roll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                rs_input_rollActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 30));
+        jPanel24.add(rs_input_roll, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 30));
 
         jLabel60.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jLabel60.setText("Batch id");
@@ -1729,37 +2136,39 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel61.setText("Class");
         jPanel24.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 50, 30));
 
-        jTextField17.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        rs_input_batch.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        rs_input_batch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                rs_input_batchActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 90, 30));
+        jPanel24.add(rs_input_batch, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 90, 30));
 
-        jTextField18.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+        btn_rs_View_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_rs_View_.setText("View");
+        btn_rs_View_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_rs_View_MouseClicked(evt);
             }
         });
-        jPanel24.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 90, 30));
+        jPanel24.add(btn_rs_View_, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 110, 30));
 
-        jButton12.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton12.setText("View");
-        jPanel24.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, 110, 30));
+        rs_input_class.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_input_class.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "6", "7", "8", "9", "10" }));
+        jPanel24.add(rs_input_class, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 90, 30));
 
         jPanel23.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 970, 50));
 
-        jPanel31.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel31.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reult Sheet", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Fax", 1, 14))); // NOI18N
-        jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Result_sheet_panal.setBackground(new java.awt.Color(255, 255, 255));
+        Result_sheet_panal.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reult Sheet", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Fax", 1, 14))); // NOI18N
+        Result_sheet_panal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel72.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel72.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 100, 20));
+        rsg_gpa.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_gpa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_gpa.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_gpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 100, 20));
 
         jLabel73.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel73.setText("Subject Name");
@@ -1805,170 +2214,196 @@ public class View_DashBoard extends javax.swing.JFrame {
         jLabel83.setText("G.P.A");
         jPanel35.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 100, 20));
 
-        jLabel84.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel84.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 100, 20));
-
-        jLabel85.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel85.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 100, 20));
-
-        jLabel86.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel86.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 100, 20));
-
-        jLabel87.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel87.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 100, 20));
-
-        jLabel88.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel88.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 100, 20));
-
-        jLabel89.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel89.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 100, 20));
-
-        jLabel90.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel90.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 100, 20));
-
-        jLabel91.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel91.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 100, 20));
-
-        jLabel92.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel92.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 100, 20));
-
-        jLabel93.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel93.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 100, 20));
-
-        jLabel94.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel94.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 100, 20));
-
-        jLabel95.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel95.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 100, 20));
-
-        jLabel96.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel96.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 100, 20));
-
-        jLabel97.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel97.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 100, 20));
-
-        jLabel98.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel98.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel35.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 100, 20));
-
-        tableGrade.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "G.P.A", "Mark"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+        rs_bangla.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_bangla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_bangla.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        rs_bangla.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                rs_banglaPropertyChange(evt);
             }
         });
-        jScrollPane6.setViewportView(tableGrade);
-        if (tableGrade.getColumnModel().getColumnCount() > 0) {
-            tableGrade.getColumnModel().getColumn(0).setResizable(false);
-            tableGrade.getColumnModel().getColumn(1).setResizable(false);
-        }
+        jPanel35.add(rs_bangla, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 100, 20));
 
-        jPanel35.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 160, 120));
+        rs_english.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_english.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_english.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_english, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 100, 20));
 
-        jPanel31.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 790, 290));
+        rs_math.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_math.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_math.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_math, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 100, 20));
+
+        rs_scince.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_scince.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_scince.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_scince, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 100, 20));
+
+        rs_social.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_social.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_social.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_social, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 100, 20));
+
+        rs_islam.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_islam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_islam.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_islam, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 100, 20));
+
+        rs_total.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_total.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_total.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 100, 20));
+
+        rs_gpa.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_gpa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_gpa.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rs_gpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 100, 20));
+
+        rsg_bangla.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_bangla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_bangla.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_bangla, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 100, 20));
+
+        rsg_english.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_english.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_english.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_english, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 100, 20));
+
+        rsg_math.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_math.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_math.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_math, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 100, 20));
+
+        rsg_scince.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_scince.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_scince.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_scince, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 100, 20));
+
+        rsg_social.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_social.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_social.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_social, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 100, 20));
+
+        rsg_islam.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_islam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_islam.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_islam, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 100, 20));
+
+        rsg_total.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rsg_total.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rsg_total.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel35.add(rsg_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 100, 20));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/Grede_3.png"))); // NOI18N
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel35.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, 150));
+
+        jLabel123.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel123.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel123.setText("Author Signature");
+        jPanel35.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 240, 20));
+
+        jLabel124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assate/rsz_rsz_sign-removebg-preview.png"))); // NOI18N
+        jPanel35.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 100, 80));
+
+        Result_sheet_panal.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 790, 290));
 
         jLabel62.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jLabel62.setText("Lalbag Model School and Collage ");
-        jPanel31.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 400, 20));
+        Result_sheet_panal.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 340, 20));
 
         jLabel63.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel63.setText("lalbag, Dhaka-1212");
-        jPanel31.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 310, -1));
+        Result_sheet_panal.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 310, -1));
 
-        jLabel64.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
-        jLabel64.setText("NAME");
-        jPanel31.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 160, 30));
+        rs_name.setFont(new java.awt.Font("Lucida Fax", 1, 16)); // NOI18N
+        rs_name.setText("xxx");
+        Result_sheet_panal.add(rs_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 160, 30));
 
-        jLabel65.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel65.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jLabel65.setForeground(new java.awt.Color(255, 102, 102));
-        jLabel65.setText("Final");
-        jPanel31.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 97, 110, 20));
+        rs_catagory.setBackground(new java.awt.Color(255, 255, 255));
+        rs_catagory.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_catagory.setText("xxx");
+        Result_sheet_panal.add(rs_catagory, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 100, 30));
 
         jLabel66.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel66.setText("Roll No");
-        jPanel31.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 20));
+        Result_sheet_panal.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 20));
 
         jLabel67.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel67.setText("Session");
-        jPanel31.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 120, 30));
+        jLabel67.setText("Result");
+        Result_sheet_panal.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 120, 30));
 
-        jLabel68.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel68.setText("00");
-        jPanel31.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 80, 30));
+        rs_session.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_session.setText("xxx");
+        Result_sheet_panal.add(rs_session, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, 80, 30));
 
-        jLabel69.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel69.setText("00");
-        jPanel31.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 70, 20));
+        rs_roll.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_roll.setText("xxx");
+        Result_sheet_panal.add(rs_roll, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 70, 20));
 
         jLabel70.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel70.setText("Student Name");
-        jPanel31.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 87, 120, 30));
+        Result_sheet_panal.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 87, 120, 30));
 
         jLabel71.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel71.setText("Exam Catagory");
-        jPanel31.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 120, 30));
+        Result_sheet_panal.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 120, 30));
 
         jLabel119.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel119.setText("Class");
-        jPanel31.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 120, 20));
+        Result_sheet_panal.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 120, 20));
 
         jLabel120.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel120.setText("Batch Id");
-        jPanel31.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 120, 30));
+        Result_sheet_panal.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 120, 30));
 
-        jLabel121.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel121.setText("00");
-        jPanel31.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 80, 20));
+        rs_class.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_class.setText("xxx");
+        Result_sheet_panal.add(rs_class, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 80, 20));
 
-        jLabel122.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel122.setText("00");
-        jPanel31.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, 80, 30));
+        rs_batch.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        rs_batch.setText("xxx");
+        Result_sheet_panal.add(rs_batch, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 30, 80, 30));
 
-        jPanel23.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 810, 420));
+        jLabel94.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel94.setText("Session");
+        Result_sheet_panal.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, 120, 30));
+
+        rs_PassFail.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        rs_PassFail.setForeground(new java.awt.Color(255, 51, 51));
+        rs_PassFail.setText("xxx");
+        Result_sheet_panal.add(rs_PassFail, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 80, 30));
+
+        jPanel23.add(Result_sheet_panal, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 810, 420));
 
         jPanel32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel23.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, 40, 310));
 
         jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton31.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton31.setText("Reset");
-        jPanel33.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 110, 30));
+        btn_rs_Reset_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_rs_Reset_.setText("Reset");
+        btn_rs_Reset_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_rs_Reset_MouseClicked(evt);
+            }
+        });
+        jPanel33.add(btn_rs_Reset_, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 110, 30));
 
-        jButton32.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton32.setText("Print");
-        jPanel33.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 110, 30));
+        btn_Result_sheet_panal_Print_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_Result_sheet_panal_Print_.setText("Print");
+        btn_Result_sheet_panal_Print_.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                btn_Result_sheet_panal_Print_MouseDragged(evt);
+            }
+        });
+        btn_Result_sheet_panal_Print_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_Result_sheet_panal_Print_MouseClicked(evt);
+            }
+        });
+        jPanel33.add(btn_Result_sheet_panal_Print_, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 110, 30));
 
         jPanel23.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 970, 50));
 
@@ -2305,7 +2740,7 @@ public class View_DashBoard extends javax.swing.JFrame {
         jPanel51.setBackground(new java.awt.Color(255, 255, 255));
         jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        paymentStudentTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -2316,121 +2751,290 @@ public class View_DashBoard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane9.setViewportView(jTable4);
+        jScrollPane9.setViewportView(paymentStudentTable);
 
         jPanel51.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 940, 130));
-
-        jPanel52.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Staff Recipt", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BELOW_TOP, new java.awt.Font("Lucida Fax", 1, 14))); // NOI18N
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel51.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 330, 390));
 
         jPanel53.setBackground(new java.awt.Color(255, 255, 255));
         jPanel53.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Payment ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Fax", 1, 14))); // NOI18N
         jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel53.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 150, 30));
+        jPanel53.add(pay_st_Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 150, 30));
 
         jLabel103.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel103.setText("Exam fee");
-        jPanel53.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 110, 30));
+        jLabel103.setText("Date");
+        jPanel53.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 110, 30));
 
         jLabel106.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel106.setText("Session");
-        jPanel53.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 110, 30));
+        jLabel106.setText("Payment Id");
+        jPanel53.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 30));
 
         jLabel107.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel107.setText("Batch Id");
-        jPanel53.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 110, 30));
+        jPanel53.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 70, 30));
 
         jLabel108.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel108.setText("Class");
-        jPanel53.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 120, 30));
+        jPanel53.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 50, 30));
 
         jLabel109.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel109.setText("Student Roll");
-        jPanel53.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 120, 30));
+        jPanel53.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 100, 30));
 
         jLabel110.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel110.setText("Current Month");
-        jPanel53.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 120, 30));
+        jLabel110.setText("Amount");
+        jPanel53.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, 30));
 
-        jTextField19.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        pay_st_Roll.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Roll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                pay_st_RollActionPerformed(evt);
             }
         });
-        jPanel53.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 120, 30));
+        jPanel53.add(pay_st_Roll, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 130, 30));
 
-        jTextField20.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        pay_st_id.setEditable(false);
+        pay_st_id.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                pay_st_idActionPerformed(evt);
             }
         });
-        jPanel53.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 120, 30));
+        jPanel53.add(pay_st_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 130, 30));
 
-        jTextField21.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+        pay_st_TotalFee.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_TotalFee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField21ActionPerformed(evt);
+                pay_st_TotalFeeActionPerformed(evt);
             }
         });
-        jPanel53.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 120, 30));
+        jPanel53.add(pay_st_TotalFee, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 150, 30));
 
-        jComboBox3.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select month", "January", "February", "March", "April", "May", "June", "July", "August", "september", "October", "November", "December" }));
-        jPanel53.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 120, 30));
+        pay_st_current_month.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        pay_st_current_month.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select month", "January", "February", "March", "April", "May", "June", "July", "August", "september", "October", "November", "December" }));
+        pay_st_current_month.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_current_monthActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_current_month, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 130, 30));
 
-        jComboBox4.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select class", "6", "7", "8", "9", "10" }));
-        jPanel53.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 120, 30));
+        pay_st_class_combo.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        pay_st_class_combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select class", "6", "7", "8", "9", "10" }));
+        jPanel53.add(pay_st_class_combo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 130, 30));
 
         jLabel111.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabel111.setText("Due Month");
-        jPanel53.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 110, 30));
+        jPanel53.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 110, 30));
 
         jLabel112.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel112.setText("Admision fee");
-        jPanel53.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 110, 30));
+        jLabel112.setText("Admision Fee");
+        jPanel53.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 110, 30));
 
-        jComboBox5.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select exam", "Half Yearly", "Final" }));
-        jPanel53.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 120, 30));
+        pay_st_catagory.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        pay_st_catagory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select exam", "Half Yearly", "Final" }));
+        jPanel53.add(pay_st_catagory, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 150, 30));
 
-        jTextField22.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+        pay_st_batch.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_batch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
+                pay_st_batchActionPerformed(evt);
             }
         });
-        jPanel53.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 120, 30));
+        jPanel53.add(pay_st_batch, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 130, 30));
 
-        jComboBox6.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel53.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 120, 30));
+        jLabel121.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel121.setText("Session");
+        jPanel53.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 70, 30));
 
-        jPanel51.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 590, 350));
+        pay_st_session.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_session.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_sessionActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_session, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 130, 30));
 
-        jButton24.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton24.setText("Print");
-        jPanel51.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 100, 30));
+        jLabel122.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel122.setText("Exam Catagory");
+        jPanel53.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 110, 30));
 
-        jButton25.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton25.setText("Add to cart");
-        jPanel51.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 140, 30));
+        pay_st_admision.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_admision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_admisionActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_admision, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 150, 30));
 
-        jButton26.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton26.setText("Done");
-        jPanel51.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 100, 30));
+        jLabel125.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel125.setText("Total Fee");
+        jPanel53.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 110, 30));
 
-        jButton27.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton27.setText("Reset");
-        jPanel51.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 100, 30));
+        jLabel126.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel126.setText("Exam Fee");
+        jPanel53.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 110, 30));
 
-        jButton30.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton30.setText("Update");
-        jPanel51.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 110, 30));
+        pay_st_exam_fee.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_exam_fee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_exam_feeActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_exam_fee, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 150, 30));
+
+        pay_st_Mon_july.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_july.setText("Jul");
+        pay_st_Mon_july.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_julyActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_july, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 60, 30));
+
+        pay_st_Mon_jan.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_jan.setText("Jan");
+        jPanel53.add(pay_st_Mon_jan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 60, 30));
+
+        pay_st_Mon_feb.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_feb.setText("Feb");
+        pay_st_Mon_feb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_febActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_feb, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 60, 30));
+
+        pay_st_Mon_aug.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_aug.setText("Aug");
+        pay_st_Mon_aug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_augActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_aug, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 60, 30));
+
+        pay_st_Mon_mar.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_mar.setText("Mar");
+        pay_st_Mon_mar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_marActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_mar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 60, 30));
+
+        pay_st_Mon_sep.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_sep.setText("Sep");
+        pay_st_Mon_sep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_sepActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_sep, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 60, 30));
+
+        pay_st_Mon_may.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_may.setText("May");
+        pay_st_Mon_may.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_mayActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_may, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 60, 30));
+
+        pay_st_Mon_nov.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_nov.setText("Nov");
+        pay_st_Mon_nov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_novActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_nov, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 60, 30));
+
+        pay_st_Mon_apr.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_apr.setText("Apr");
+        pay_st_Mon_apr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_aprActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_apr, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 60, 30));
+
+        pay_st_Mon_dec.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_dec.setText("Dec");
+        pay_st_Mon_dec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_decActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_dec, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 60, 30));
+
+        pay_st_Mon_june.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_june.setText("June");
+        pay_st_Mon_june.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_juneActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_june, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 60, 30));
+
+        pay_st_Mon_Oct.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_Mon_Oct.setText("Oct");
+        pay_st_Mon_Oct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_Mon_OctActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_Mon_Oct, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 60, 30));
+
+        pay_st_cruntAmount.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        pay_st_cruntAmount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pay_st_cruntAmountActionPerformed(evt);
+            }
+        });
+        jPanel53.add(pay_st_cruntAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 130, 30));
+
+        jLabel127.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel127.setText("Current Month");
+        jPanel53.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, 30));
+
+        jPanel51.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 360));
+
+        btn_st_pay_print.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_st_pay_print.setText("Print");
+        btn_st_pay_print.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_st_pay_printMouseClicked(evt);
+            }
+        });
+        jPanel51.add(btn_st_pay_print, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 100, 30));
+
+        btn_st_pay_AddCurt_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_st_pay_AddCurt_.setText("Add to cart");
+        jPanel51.add(btn_st_pay_AddCurt_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 140, 30));
+
+        btn_st_pay_save_.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_st_pay_save_.setText("Save");
+        btn_st_pay_save_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_st_pay_save_MouseClicked(evt);
+            }
+        });
+        jPanel51.add(btn_st_pay_save_, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 100, 30));
+
+        btn_st_pay_reset.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_st_pay_reset.setText("Reset");
+        jPanel51.add(btn_st_pay_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 100, 30));
+
+        btn_st_pay_update.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        btn_st_pay_update.setText("Update");
+        jPanel51.add(btn_st_pay_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 110, 30));
+
+        Payment_student_.setColumns(20);
+        Payment_student_.setRows(5);
+        Payment_student_.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Recepit", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Lucida Fax", 1, 14))); // NOI18N
+        jScrollPane6.setViewportView(Payment_student_);
+
+        jPanel51.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 340, 390));
 
         jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 980, 560));
 
@@ -2464,6 +3068,9 @@ public class View_DashBoard extends javax.swing.JFrame {
         mainTab.setSelectedIndex(0);
         StudentTab.setSelectedIndex(0);
         TeacherTab.setSelectedIndex(0);
+
+        btnHome.setBackground(new Color(52, 152, 219));
+
     }//GEN-LAST:event_btnHomeMouseClicked
 
     private void btnStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStudentMouseClicked
@@ -2506,12 +3113,12 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     private void btnHomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeMouseEntered
         // TODO add your handling code here:
-        btnHome.setBackground(Color.GREEN);
+        btnHome.setBackground(new Color(52, 152, 219));
     }//GEN-LAST:event_btnHomeMouseEntered
 
     private void btnHomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeMouseExited
         // TODO add your handling code here:
-        btnHome.setBackground(new Color(255, 153, 153));
+        btnHome.setBackground(new Color(204, 255, 204));
     }//GEN-LAST:event_btnHomeMouseExited
 
     private void st_1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_1MouseEntered
@@ -2533,6 +3140,8 @@ public class View_DashBoard extends javax.swing.JFrame {
     private void st_btn_result_inMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_inMouseClicked
         // TODO add your handling code here:
         StudentTab.setSelectedIndex(3);
+        InvisiableResultInput();
+     
     }//GEN-LAST:event_st_btn_result_inMouseClicked
 
     private void st_btn_result_outMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_outMouseClicked
@@ -2558,10 +3167,6 @@ public class View_DashBoard extends javax.swing.JFrame {
         // TODO add your handling code here:
         TeacherTab.setSelectedIndex(3);
     }//GEN-LAST:event_te_btn_reportMouseClicked
-
-    private void btnStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnStudentActionPerformed
 
     private void s_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_s_emailActionPerformed
         // TODO add your handling code here:
@@ -2597,11 +3202,7 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     private void btn_Save_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Save_MouseClicked
         // TODO add your handling code here:    
-        
-         
-         
-           
-         
+
         String sql = "insert into School ( Session_year,batch_id,classs,student_Roll,full_name,fathers_name,"
                 + "fathers_phone,mothers_name,mothers_phone,date_of_birth,age,gender,religion,nationality,"
                 + "email,blood_group,birth_certificate,present_Address,permanent_Address)"
@@ -2639,6 +3240,11 @@ public class View_DashBoard extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "data is save");
             AdmisionReset();
             studentTable();
+            TotalStudentReport_6();
+            TotalStudentReport_7();
+            TotalStudentReport_8();
+            TotalStudentReport_9();
+            TotalStudentReport_10();
 //            getClassTocomboFromStudentTable();
         } catch (SQLException ex) {
             Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
@@ -2655,13 +3261,15 @@ public class View_DashBoard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_sd_View1_ActionPerformed
 
-    private void btn_sd_update_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sd_update_ActionPerformed
+    private void btn_sd_Print_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sd_Print_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_sd_update_ActionPerformed
+    }//GEN-LAST:event_btn_sd_Print_ActionPerformed
 
     private void btn_sd_View1_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_sd_View1_MouseClicked
         // TODO add your handling code here:
         getDateFromDataBaseSetViewForm();
+
+
     }//GEN-LAST:event_btn_sd_View1_MouseClicked
 
     private void r_gradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_gradeActionPerformed
@@ -2723,21 +3331,17 @@ public class View_DashBoard extends javax.swing.JFrame {
         Exam_Seduel.setSelectedIndex(3);
     }//GEN-LAST:event_jButton8MouseClicked
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void rs_input_sessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rs_input_sessionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_rs_input_sessionActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void rs_input_rollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rs_input_rollActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_rs_input_rollActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void rs_input_batchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rs_input_batchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
-
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_rs_input_batchActionPerformed
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
         // TODO add your handling code here:
@@ -2753,22 +3357,6 @@ public class View_DashBoard extends javax.swing.JFrame {
         // TODO add your handling code here:
         PaymentTab.setSelectedIndex(3);
     }//GEN-LAST:event_jButton13MouseClicked
-
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
-
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
-
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
-
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
 
     private void te_btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_te_btn_addActionPerformed
         // TODO add your handling code here:
@@ -2794,7 +3382,7 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     public float avarageNumberResult() {
 
-        float avarageNumver = totalNumber() / 6;
+        float avarageNumver = ((float) totalNumber() / 6);
         return avarageNumver;
     }
 
@@ -2802,7 +3390,7 @@ public class View_DashBoard extends javax.swing.JFrame {
     private void btn_R_save_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_R_save_MouseClicked
         // TODO add your handling code here:
         String sql = "INSERT INTO resultsheet (Session_year, batch_id, classs, student_Roll, bangla, english, Math, Scince,"
-                + " social, islam, totalMark, avarageMark, g_p_a, grade,examcatagory) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";;
+                + " social, islam, totalMark, avarageMark, g_p_a, grade,passFail, examcatagory) VALUES (?,?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";;
         try {
             ps = con.getCon().prepareStatement(sql);
             ps.setInt(1, Integer.parseInt(r_session.getText().toString().trim()));
@@ -2819,7 +3407,8 @@ public class View_DashBoard extends javax.swing.JFrame {
             ps.setFloat(12, Float.parseFloat(avarageNumberResult() + ""));
             ps.setFloat(13, Float.parseFloat(r_gpa.getText().toString().trim()));
             ps.setString(14, r_grade.getText().toString().trim());
-            ps.setString(15, r_examSelect.getSelectedItem().toString().trim());
+            ps.setString(15, r_passFail.getText().toString().trim());
+            ps.setString(16, r_examSelect.getSelectedItem().toString().trim());
 
             ps.executeUpdate();
             ps.close();
@@ -2827,6 +3416,7 @@ public class View_DashBoard extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "data is save");
             resultTable();
             resultReset();
+            AllMethods();
         } catch (SQLException ex) {
             Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(rootPane, "data is not save");
@@ -2835,14 +3425,162 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_R_save_MouseClicked
 
+//         result input panal ar jonno GPA number method----------------------------------------------
+    public float GPAResult() {
+
+        int bangla = Integer.parseInt(r_bangla.getText().toString().trim());
+        int english = Integer.parseInt(r_english.getText().toString().trim());
+        int math = Integer.parseInt(r_math.getText().toString().trim());
+        int science = Integer.parseInt(r_scince.getText().toString().trim());
+        int social = Integer.parseInt(r_social.getText().toString().trim());
+        int islam = Integer.parseInt(r_islam.getText().toString().trim());
+
+        int[] subjects = {bangla, english, math, science, social, islam};
+        float[] gradePoints = {5.0f, 4.0f, 3.5f, 3.0f, 2.0f, 1.0f, 0.0f};
+
+        float totalGradePoints = 0.0f;
+        int totalSubjects = subjects.length;
+
+        for (int i = 0; i < totalSubjects; i++) {
+            int marks = subjects[i];
+            if (marks >= 80) {
+                totalGradePoints += gradePoints[0];
+            } else if (marks >= 70) {
+                totalGradePoints += gradePoints[1];
+            } else if (marks >= 60) {
+                totalGradePoints += gradePoints[2];
+            } else if (marks >= 50) {
+                totalGradePoints += gradePoints[3];
+            } else if (marks >= 40) {
+                totalGradePoints += gradePoints[4];
+            } else if (marks >= 33) {
+                totalGradePoints += gradePoints[5];
+            } else {
+                totalGradePoints += gradePoints[6];
+            }
+        }
+
+        float averageGradePoint = totalGradePoints / totalSubjects;
+        return averageGradePoint;
+
+    }
+//result input panal ar jonno GREDE number method----------------------------------------------
+
+    public String GredeResult() {
+        String grede = "";
+        if (GPAResult() >= 5) {
+            grede = "A+";
+        } else if (GPAResult() >= 4) {
+            grede = "A";
+        } else if (GPAResult() >= 3.5) {
+            grede = "A-";
+        } else if (GPAResult() >= 3) {
+            grede = "B";
+        } else if (GPAResult() >= 2) {
+            grede = "c";
+        } else if (GPAResult() >= 1) {
+            grede = "D";
+        } else if (GPAResult() >= 0) {
+            grede = "F";
+        }
+        return grede;
+    }
+
+    //resultShow panal ar jonno GREDE number method----------------------------------------------
+    public String GredeTotalResultShow(String point) {
+
+        float points = 0.0f;
+
+        if (point.isEmpty()) {
+            points = 0.0f;
+
+        } else {
+            points = Float.parseFloat(point);
+        }
+        String grede = "";
+        if (points >= 5) {
+            grede = "A+";
+        } else if (points >= 4) {
+            grede = "A";
+        } else if (points >= 3.5) {
+            grede = "A-";
+        } else if (points >= 3) {
+            grede = "B";
+        } else if (points >= 2) {
+            grede = "c";
+        } else if (points >= 1) {
+            grede = "D";
+        } else if (points >= 0) {
+            grede = "F";
+        }
+        return grede;
+    }
+
+    public String getGrade(String marks) {
+        int mark = 0;
+
+        if (marks.isEmpty()) {
+            mark = 0;
+
+        } else {
+            mark = Integer.parseInt(marks);
+        }
+
+        String grede = "";
+        if (mark >= 80) {
+            grede = "A+";
+        } else if (mark >= 70) {
+            grede = "A";
+        } else if (mark >= 60) {
+            grede = "A-";
+        } else if (mark >= 50) {
+            grede = "B";
+        } else if (mark >= 40) {
+            grede = "c";
+        } else if (mark >= 33) {
+            grede = "D";
+        } else if (mark >= 0) {
+            grede = "F";
+        }
+        return grede;
+
+    }
+
+    public void PassFaildResult() {
+
+        int bangla = Integer.parseInt(r_bangla.getText().toString().trim());
+        int english = Integer.parseInt(r_english.getText().toString().trim());
+        int math = Integer.parseInt(r_math.getText().toString().trim());
+        int science = Integer.parseInt(r_scince.getText().toString().trim());
+        int social = Integer.parseInt(r_social.getText().toString().trim());
+        int islam = Integer.parseInt(r_islam.getText().toString().trim());
+
+        if (bangla > 32 && english > 32 && math > 32 && science > 32 && social > 32 && islam > 32) {
+            r_gpa.setText(GPAResult() + "");
+            r_grade.setText(GredeResult());
+            r_passFail.setText("Pass");
+        } else {
+            r_gpa.setText(0.00 + "");
+            r_grade.setText("F");
+            r_passFail.setText("Fail");
+
+        }
+
+    }
+
+
     private void r_islamFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_r_islamFocusLost
         // TODO add your handling code here:
         r_total.setText(totalNumber() + "");
         r_avarage.setText(avarageNumberResult() + "");
+//        r_gpa.setText(GPAResult() + "");
+//        r_grade.setText(GredeResult());
+
+        PassFaildResult();
     }//GEN-LAST:event_r_islamFocusLost
 
     String[] ResultDataShow = {"serial_No", "Session_year", "batch_id", "Class", "Roll", "bangla", "english", "math", "scince",
-        "social", "islam", "total", "avarage", "GPA", "Grade", "catagory"};
+        "social", "islam", "total", "avarage", "GPA", "Grade", "Result ", "catagory"};
 
     public void resultTable() {
 
@@ -2868,12 +3606,13 @@ public class View_DashBoard extends javax.swing.JFrame {
                 int social = rs.getInt("social");
                 int islam = rs.getInt("islam");
                 int totalMark = rs.getInt("totalMark");
-                int avarage = rs.getInt("avarageMark");
-                int gpa = rs.getInt("g_p_a");
+                float avarage = rs.getFloat("avarageMark");
+                float gpa = rs.getFloat("g_p_a");
+                String passFail = rs.getString("passFail");
                 String grede = rs.getString("grade");
                 String catagpry = rs.getString("examCatagory");
 
-                modelTable.addRow(new Object[]{serial, session, batch, classs, roll, bangla, english, math, scince, social, islam, totalMark, avarage, gpa, grede, catagpry});
+                modelTable.addRow(new Object[]{serial, session, batch, classs, roll, bangla, english, math, scince, social, islam, totalMark, avarage, gpa, grede, passFail, catagpry});
             }
             rs.close();
             ps.close();
@@ -2904,7 +3643,8 @@ public class View_DashBoard extends javax.swing.JFrame {
         String avarage = tableResultInput.getModel().getValueAt(row, 12).toString();
         String gpa = tableResultInput.getModel().getValueAt(row, 13).toString();
         String grade = tableResultInput.getModel().getValueAt(row, 14).toString();
-        String catagory = tableResultInput.getModel().getValueAt(row, 15).toString();
+        String passfail = tableResultInput.getModel().getValueAt(row, 15).toString();
+        String catagory = tableResultInput.getModel().getValueAt(row, 16).toString();
 
         r_Serial.setText(serial);
         r_session.setText(Session);
@@ -2921,6 +3661,7 @@ public class View_DashBoard extends javax.swing.JFrame {
         r_avarage.setText(avarage);
         r_gpa.setText(gpa);
         r_grade.setText(grade);
+        r_passFail.setText(passfail);
         r_examSelect.setSelectedItem(catagory);
 
 
@@ -2951,6 +3692,7 @@ public class View_DashBoard extends javax.swing.JFrame {
                 resultTable();
                 // Optionally, you can reset the input fields after deletion
                 resultReset();
+                AllMethods();
             } else {
                 JOptionPane.showMessageDialog(rootPane, "No records found for deletion");
             }
@@ -2984,14 +3726,16 @@ public class View_DashBoard extends javax.swing.JFrame {
             ps.setFloat(12, Float.parseFloat(avarageNumberResult() + ""));
             ps.setFloat(13, Float.parseFloat(r_gpa.getText().toString().trim()));
             ps.setString(14, r_grade.getText().toString().trim());
-            ps.setString(15, r_examSelect.getSelectedItem().toString().trim());
-            ps.setInt(16, Integer.parseInt(r_Serial.getText().toString().trim()));
+            ps.setString(15, r_passFail.getText().toString().trim());
+            ps.setString(16, r_examSelect.getSelectedItem().toString().trim());
+            ps.setInt(17, Integer.parseInt(r_Serial.getText().toString().trim()));
             ps.executeUpdate();
             ps.close();
             con.getCon().close();
             JOptionPane.showMessageDialog(rootPane, "Data is updated");
             resultTable();
             resultTable();
+            AllMethods();
         } catch (SQLException ex) {
             Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(rootPane, "Data update failed");
@@ -3007,31 +3751,1020 @@ public class View_DashBoard extends javax.swing.JFrame {
 
     private void btn_Image_set_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Image_set_MouseClicked
         // TODO add your handling code here:
-        
+
         JFileChooser browseImageFile = new JFileChooser();
 
-    // for filtering image extension
+        // for filtering image extension
         FileNameExtensionFilter fnef = new FileNameExtensionFilter("IMAGES", "png", "jpg", "jpeg");
-    browseImageFile.addChoosableFileFilter(fnef);
+        browseImageFile.addChoosableFileFilter(fnef);
 
-    int showOpenDialogue = browseImageFile.showOpenDialog(null);
+        int showOpenDialogue = browseImageFile.showOpenDialog(null);
 
-    if (showOpenDialogue == JFileChooser.APPROVE_OPTION) {
-        File selectedImageFile = browseImageFile.getSelectedFile();
-        String selectedImagePath = selectedImageFile.getAbsolutePath();
-        JOptionPane.showMessageDialog(null, selectedImagePath);
+        if (showOpenDialogue == JFileChooser.APPROVE_OPTION) {
+            File selectedImageFile = browseImageFile.getSelectedFile();
+            String selectedImagePath = selectedImageFile.getAbsolutePath();
+            JOptionPane.showMessageDialog(null, selectedImagePath);
 
-        // for displaying image on jlabel
-        ImageIcon li = new ImageIcon(selectedImagePath);
+            // for displaying image on jlabel
+            ImageIcon li = new ImageIcon(selectedImagePath);
 
-        // for resize image in jlabel
-        Image image = li.getImage().getScaledInstance(s_Image_lable.getWidth(), s_Image_lable.getHeight(), Image.SCALE_SMOOTH);
+            // for resize image in jlabel
+            Image image = li.getImage().getScaledInstance(s_Image_lable.getWidth(), s_Image_lable.getHeight(), Image.SCALE_SMOOTH);
 
-        s_Image_lable.setIcon(new ImageIcon(image));
-    }
-        
-        
+            s_Image_lable.setIcon(new ImageIcon(image));
+        }
+
+
     }//GEN-LAST:event_btn_Image_set_MouseClicked
+
+//One by one student result show Query resultsheet show------------------------------------
+    public void getDataFormResultSheet() {
+
+        String sql = "select * from resultsheet where Session_year=? and batch_id=?"
+                + " and classs=? and student_Roll=?";
+
+        try {
+//            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // Customize the date format as needed
+
+            ps = con.getCon().prepareStatement(sql);
+
+            System.out.println("2");
+            int year = Integer.parseInt(rs_input_session.getText().toString().trim());
+            ps.setInt(1, year);
+
+//            ps.setInt(1, Integer.parseInt("Session_year"));
+            ps.setString(2, rs_input_batch.getText().toString().trim());
+            ps.setString(3, rs_input_class.getSelectedItem().toString().trim());
+            ps.setString(4, rs_input_roll.getText().toString().trim());
+
+            rs = ps.executeQuery();
+
+            System.out.println("5");
+
+            while (rs.next()) {
+                System.out.println("9");
+                rs_bangla.setText(rs.getString("bangla"));
+                rs_english.setText(rs.getString("english"));
+                rs_math.setText(rs.getString("Math"));
+                rs_scince.setText(rs.getString("scince"));
+                rs_social.setText(rs.getString("social"));
+                rs_islam.setText(rs.getString("islam"));
+                rs_total.setText(rs.getString("totalMark"));
+                rs_gpa.setText(rs.getString("g_p_a"));
+                rs_PassFail.setText(rs.getString("passFail"));
+                rsg_total.setText(rs.getString("passFail"));
+                rs_catagory.setText(rs.getString("examCatagory"));
+                
+
+                String bangla_grade = getGrade(rs.getString("bangla"));
+                String english_grade = getGrade(rs.getString("english"));
+                String math_grade = getGrade(rs.getString("Math"));
+                String scince_grade = getGrade(rs.getString("scince"));
+                String social_grade = getGrade(rs.getString("social"));
+                String islam_grade = getGrade(rs.getString("islam"));
+                String GPa_grade = GredeTotalResultShow(rs.getString("g_p_a"));
+
+                rsg_bangla.setText(bangla_grade);
+                rsg_english.setText(english_grade);
+                rsg_math.setText(math_grade);
+                rsg_scince.setText(scince_grade);
+                rsg_social.setText(social_grade);
+                rsg_islam.setText(islam_grade);
+                rsg_gpa.setText(GPa_grade);
+
+//               rs_total.setText(rs.getString("totalMark"));
+//               rs_total.setText(rs.getString("totalMark"));
+//               rs_total.setText(rs.getString("totalMark"));
+//                java.util.Date dateOfBirth = rs.getDate("date_of_birth");
+//                String formattedDateOfBirth = dateFormat.format(dateOfBirth);
+//                sd_Dob.setText(formattedDateOfBirth);
+//                sd_Dob.setText(rs.getDate("date_of_birth"));
+//                int age = rs.getInt("age");
+//                sd_Age.setText(Integer.toString(age));
+//                sd_gender_combo.setText(rs.getString("gender"));
+//                sd_religion.setText(rs.getString("religion"));
+//                sd_nationality.setText(rs.getString("nationality"));
+//                sd_email.setText(rs.getString("email"));
+//                sd_blood.setText(rs.getString("blood_group"));
+//                sd_birth_cer.setText(rs.getString("birth_certificate"));
+//                sd_presentA.setText(rs.getString("present_Address"));
+//                sd_parmanentA.setText(rs.getString("permanent_Address"));
+//                sd_session.setText(rs.getString("Session_year"));
+//                sd_batchId.setText(rs.getString("batch_id"));
+//                sd_class_combo.setSelectedItem(rs.getString("classs"));
+//                sd_studentID.setText(rs.getString("student_Roll"));
+                // Set other text fields in a similar manner
+            }
+            rs.close();
+            ps.close();
+            con.getCon().close();
+
+            rs_roll.setText(rs_input_roll.getText());
+            rs_batch.setText(rs_input_batch.getText());
+            rs_class.setText(rs_input_class.getSelectedItem().toString());
+            rs_session.setText(rs_input_session.getText());
+
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+
+            JOptionPane.showMessageDialog(null, "No matching record found.");
+        }
+    }
+
+    //One by one student name result show Query school table show------------------------------------
+    public void getDataformSchoolTableOnlyName() {
+
+        String sql = "select full_name from school where Session_year=? and batch_id=? and classs=? and student_Roll=?";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            System.out.println("2");
+            int year = Integer.parseInt(rs_input_session.getText().toString().trim());
+            ps.setInt(1, year);
+
+//            ps.setInt(1, Integer.parseInt("Session_year"));
+            ps.setString(2, rs_input_batch.getText().toString().trim());
+            ps.setString(3, rs_input_class.getSelectedItem().toString().trim());
+            ps.setString(4, rs_input_roll.getText().toString().trim());
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                rs_name.setText(rs.getString("full_name"));
+
+            }
+            rs.close();
+            ps.close();
+            con.getCon().close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+//    public void 
+
+
+    private void btn_rs_View_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_rs_View_MouseClicked
+        String mark = rs_bangla.getText();        // TODO add your handling code here:
+        getDataFormResultSheet();
+        getDataformSchoolTableOnlyName();
+
+        getGrade(mark);
+
+
+    }//GEN-LAST:event_btn_rs_View_MouseClicked
+
+    private void btn_rs_Reset_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_rs_Reset_MouseClicked
+        // TODO add your handling code here:
+
+        resultShowReset();
+    }//GEN-LAST:event_btn_rs_Reset_MouseClicked
+
+    private void rs_banglaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_rs_banglaPropertyChange
+        // TODO add your handling code here:
+        String mark = rs_bangla.getText();
+
+        if (mark.isEmpty()) {
+            rs_bangla.setText("");
+
+        } else {
+            getGrade(mark);
+        }
+
+
+    }//GEN-LAST:event_rs_banglaPropertyChange
+
+    private void btn_Result_sheet_panal_Print_MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Result_sheet_panal_Print_MouseDragged
+        // TODO add your handling code here:
+        PrinterJob job = PrinterJob.getPrinterJob();
+        job.setJobName("print Data");
+
+        job.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                pf.setOrientation(PageFormat.LANDSCAPE);
+                if (pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+                Graphics2D g2 = (Graphics2D) pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                g2.scale(0.47, 0.47);
+                Result_sheet_panal.print(g2);
+                return Printable.PAGE_EXISTS;
+            }
+
+        });
+
+        boolean ok = job.printDialog();
+        if (ok) {
+
+            try {
+                job.print();
+            } catch (PrinterException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+    }//GEN-LAST:event_btn_Result_sheet_panal_Print_MouseDragged
+
+    private void btn_Result_sheet_panal_Print_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_Result_sheet_panal_Print_MouseClicked
+        // TODO add your handling code here:
+
+        PrinterJob job = PrinterJob.getPrinterJob();
+        job.setJobName("print Data");
+
+        job.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                pf.setOrientation(PageFormat.LANDSCAPE);
+                if (pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+                Graphics2D g2 = (Graphics2D) pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                g2.scale(0.47, 0.47);
+                Result_sheet_panal.print(g2);
+                return Printable.PAGE_EXISTS;
+            }
+
+        });
+
+        boolean ok = job.printDialog();
+        if (ok) {
+
+            try {
+                job.print();
+            } catch (PrinterException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_btn_Result_sheet_panal_Print_MouseClicked
+
+    private void btn_sd_Print_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_sd_Print_MouseClicked
+        // TODO add your handling code here:
+
+        PrinterJob job = PrinterJob.getPrinterJob();
+        job.setJobName("print Data");
+
+        job.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                pf.setOrientation(PageFormat.LANDSCAPE);
+                if (pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+                Graphics2D g2 = (Graphics2D) pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                g2.scale(0.47, 0.47);
+                Student_details_panal.print(g2);
+                return Printable.PAGE_EXISTS;
+            }
+
+        });
+
+        boolean ok = job.printDialog();
+        if (ok) {
+
+            try {
+                job.print();
+            } catch (PrinterException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+
+    }//GEN-LAST:event_btn_sd_Print_MouseClicked
+
+    private void btn_sd_View_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_sd_View_MouseClicked
+        // TODO add your handling code here:
+
+        getDateFromDataBaseSetViewForm();
+
+
+    }//GEN-LAST:event_btn_sd_View_MouseClicked
+
+    private void btn_st_pay_printMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_st_pay_printMouseClicked
+        // TODO add your handling code here:
+
+        PrinterJob job = PrinterJob.getPrinterJob();
+        job.setJobName("print Data");
+
+        job.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                pf.setOrientation(PageFormat.LANDSCAPE);
+                if (pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+                Graphics2D g2 = (Graphics2D) pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                g2.scale(0.47, 0.47);
+                Payment_student_.print(g2);
+                return Printable.PAGE_EXISTS;
+            }
+
+        });
+
+        boolean ok = job.printDialog();
+        if (ok) {
+
+            try {
+                job.print();
+            } catch (PrinterException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+
+    }//GEN-LAST:event_btn_st_pay_printMouseClicked
+
+    private void btn_st_pay_save_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_st_pay_save_MouseClicked
+        // TODO add your handling code here:
+        int selectedIndex = pay_st_current_month.getSelectedIndex();
+        String month;
+        switch (selectedIndex) {
+            case 0:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 1:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 2:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 3:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 4:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 5:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 6:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 7:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 8:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 9:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 10:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 11:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            case 12:
+                month = pay_st_cruntAmount.getText().toString().trim();
+                break;
+            // Add more cases for other indices if needed
+            default:
+                month = pay_st_cruntAmount.getText().toString().trim(); // Set a default query or handle the default case accordingly
+                break;
+        }
+
+//        if (pay_st_current_month.getSelectedIndex(1)) {
+//
+//        } else {
+//        }
+        String sql = "INSERT INTO payment (session,batch_id,class,roll,jan,feb,mar,apr,may,june,july,aug,"
+                + "sep,oct,nov,dec,examPayment,admisionFee,totalPay,examcatagory,date) VALUES "
+                + "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        try {
+
+            ps = con.getCon().prepareStatement(sql);
+
+            ps.setInt(1, Integer.parseInt(pay_st_session.getText().toString().trim()));
+            ps.setString(2, pay_st_batch.getText().toString().trim());
+            ps.setString(3, pay_st_class_combo.getSelectedItem().toString().trim());
+            ps.setInt(4, Integer.parseInt(pay_st_Roll.getText().toString().trim()));
+            ps.setInt(5, Integer.parseInt(pay_st_Mon_jan.getText().toString().trim()));
+            ps.setInt(6, Integer.parseInt(pay_st_Mon_feb.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_mar.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_apr.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_may.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_jan.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_july.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_aug.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_sep.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_Oct.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_nov.getText().toString().trim()));
+            ps.setInt(4, Integer.parseInt(pay_st_Mon_dec.getText().toString().trim()));
+//           
+//           
+//           
+//            ps.setInt(11, Integer.parseInt(s_age.getText().toString().trim()));
+//            ps.setString(12, s_gender_combo.getSelectedItem().toString().trim());
+//            ps.setString(13, s_religion.getText().toString().trim());
+//            ps.setString(14, s_National.getText().toString().trim());
+//            ps.setString(15, s_email.getText().toString().trim());
+//            ps.setString(16, s_BloodGroup.getSelectedItem().toString().trim());
+//            ps.setInt(17, Integer.parseInt(s_birth_certificate.getText().toString().trim()));
+//            ps.setString(18, s_presentAddress.getText().toString().trim());
+//            ps.setString(19, s_parmanent.getText().toString().trim());
+//            
+            ps.setDate(10, dateMethod(pay_st_Date.getDate()));
+
+            ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+
+            JOptionPane.showMessageDialog(rootPane, "data is save");
+
+//            getClassTocomboFromStudentTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, "data is not save");
+        }
+
+
+    }//GEN-LAST:event_btn_st_pay_save_MouseClicked
+
+    private void pay_st_cruntAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_cruntAmountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_cruntAmountActionPerformed
+
+    private void pay_st_Mon_OctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_OctActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_OctActionPerformed
+
+    private void pay_st_Mon_juneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_juneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_juneActionPerformed
+
+    private void pay_st_Mon_decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_decActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_decActionPerformed
+
+    private void pay_st_Mon_aprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_aprActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_aprActionPerformed
+
+    private void pay_st_Mon_novActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_novActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_novActionPerformed
+
+    private void pay_st_Mon_mayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_mayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_mayActionPerformed
+
+    private void pay_st_Mon_sepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_sepActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_sepActionPerformed
+
+    private void pay_st_Mon_marActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_marActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_marActionPerformed
+
+    private void pay_st_Mon_augActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_augActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_augActionPerformed
+
+    private void pay_st_Mon_febActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_febActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_febActionPerformed
+
+    private void pay_st_Mon_julyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_Mon_julyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_Mon_julyActionPerformed
+
+    private void pay_st_exam_feeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_exam_feeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_exam_feeActionPerformed
+
+    private void pay_st_admisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_admisionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_admisionActionPerformed
+
+    private void pay_st_sessionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_sessionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_sessionActionPerformed
+
+    private void pay_st_batchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_batchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_batchActionPerformed
+
+    private void pay_st_current_monthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_current_monthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_current_monthActionPerformed
+
+    private void pay_st_TotalFeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_TotalFeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_TotalFeeActionPerformed
+
+    private void pay_st_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_idActionPerformed
+
+    private void pay_st_RollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pay_st_RollActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pay_st_RollActionPerformed
+
+    private void btn_sd_delete_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_sd_delete_MouseClicked
+
+        String sql = "Delete FROM school WHERE Session_year=? and batch_id=? and classs=? and student_Roll=?";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            int year = Integer.parseInt(sd_session.getText().toString().trim());
+            ps.setInt(1, year);
+
+            ps.setString(2, sd_batchId.getText().toString().trim());
+            ps.setString(3, sd_class_combo.getSelectedItem().toString().trim());
+            ps.setString(4, sd_studentID.getText().toString().trim());
+
+            int rowsDeleted = ps.executeUpdate();
+            ps.close();
+            con.getCon().close();
+
+            if (rowsDeleted > 0) {
+                JOptionPane.showMessageDialog(rootPane, "Data is deleted");
+                resultTable();
+                // Optionally, you can reset the input fields after deletion
+                resultReset();
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "No records found for deletion");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, "Data deletion failed");
+        }
+        StudentDetailsReset();
+        TotalStudentReport_6();
+        TotalStudentReport_7();
+        TotalStudentReport_8();
+        TotalStudentReport_9();
+        TotalStudentReport_10();
+    }//GEN-LAST:event_btn_sd_delete_MouseClicked
+
+    private void btnTeacherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTeacherActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTeacherActionPerformed
+
+    private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPaymentActionPerformed
+
+    private void btnStudentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStudentMouseEntered
+        // TODO add your handling code here:
+        btnStudent.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_btnStudentMouseEntered
+
+    private void btnStudentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStudentMouseExited
+        // TODO add your handling code here:
+        btnStudent.setBackground(new Color(204, 255, 204));
+    }//GEN-LAST:event_btnStudentMouseExited
+
+    private void btnTeacherMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTeacherMouseEntered
+        // TODO add your handling code here:
+        btnTeacher.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_btnTeacherMouseEntered
+
+    private void btnTeacherMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTeacherMouseExited
+        // TODO add your handling code here:
+        btnTeacher.setBackground(new Color(204, 255, 204));
+
+    }//GEN-LAST:event_btnTeacherMouseExited
+
+    private void btnExamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExamMouseEntered
+        // TODO add your handling code here:
+        btnExam.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_btnExamMouseEntered
+
+    private void btnExamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExamMouseExited
+        // TODO add your handling code here:
+        btnExam.setBackground(new Color(204, 255, 204));
+    }//GEN-LAST:event_btnExamMouseExited
+
+    private void btnPaymentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPaymentMouseEntered
+        // TODO add your handling code here:
+        btnPayment.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_btnPaymentMouseEntered
+
+    private void btnPaymentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPaymentMouseExited
+        // TODO add your handling code here:
+        btnPayment.setBackground(new Color(204, 255, 204));
+    }//GEN-LAST:event_btnPaymentMouseExited
+
+    private void btnStaff1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaff1MouseEntered
+        // TODO add your handling code here:
+        btnStaff1.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_btnStaff1MouseEntered
+
+    private void btnStaff1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaff1MouseExited
+        // TODO add your handling code here:
+        btnStaff1.setBackground(new Color(204, 255, 204));
+    }//GEN-LAST:event_btnStaff1MouseExited
+
+    private void exitTabMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTabMouseEntered
+        // TODO add your handling code here:
+        exitTab.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_exitTabMouseEntered
+
+    private void exitTabMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTabMouseExited
+        // TODO add your handling code here:
+        exitTab.setBackground(new Color(204, 255, 204));
+    }//GEN-LAST:event_exitTabMouseExited
+
+    private void St_btn_addmitionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_St_btn_addmitionMouseEntered
+        // TODO add your handling code here:
+        St_btn_addmition.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_St_btn_addmitionMouseEntered
+
+    private void St_btn_addmitionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_St_btn_addmitionMouseExited
+        // TODO add your handling code here:
+        St_btn_addmition.setBackground(new Color(204, 204, 255));
+    }//GEN-LAST:event_St_btn_addmitionMouseExited
+
+    private void St_btn_DeatilsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_St_btn_DeatilsMouseEntered
+        // TODO add your handling code here:
+        St_btn_Deatils.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_St_btn_DeatilsMouseEntered
+
+    private void St_btn_DeatilsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_St_btn_DeatilsMouseExited
+        // TODO add your handling code here:
+        St_btn_Deatils.setBackground(new Color(204, 204, 255));
+    }//GEN-LAST:event_St_btn_DeatilsMouseExited
+
+    private void st_btn_result_inMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_inMouseEntered
+        // TODO add your handling code here:
+        st_btn_result_in.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_st_btn_result_inMouseEntered
+
+    private void st_btn_result_inMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_inMouseExited
+        // TODO add your handling code here:
+        st_btn_result_in.setBackground(new Color(204, 204, 255));
+    }//GEN-LAST:event_st_btn_result_inMouseExited
+
+    private void st_btn_result_outMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_outMouseEntered
+        // TODO add your handling code here:
+        st_btn_result_out.setBackground(new Color(52, 152, 219));
+    }//GEN-LAST:event_st_btn_result_outMouseEntered
+
+    private void st_btn_result_outMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_st_btn_result_outMouseExited
+        // TODO add your handling code here:
+        st_btn_result_out.setBackground(new Color(204, 204, 255));
+    }//GEN-LAST:event_st_btn_result_outMouseExited
+
+    private void jPanel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel21MouseClicked
+        // TODO add your handling code here:
+
+        r_total.setText(totalNumber() + "");
+        r_avarage.setText(avarageNumberResult() + "");
+//        r_gpa.setText(GPAResult() + "");
+//        r_grade.setText(GredeResult());
+
+        PassFaildResult();
+
+
+    }//GEN-LAST:event_jPanel21MouseClicked
+
+    private void r_passFailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_passFailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_r_passFailActionPerformed
+
+    private void btn_R_RollBack_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_R_RollBack_MouseClicked
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_btn_R_RollBack_MouseClicked
+
+
+    //    this mathod can query school table and if school table has data then the result input field are  visiable---------------
+    
+    
+    private void r_sessionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_r_sessionKeyReleased
+        // TODO add your handling code here:
+        
+            String sql="select full_name from school where Session_year=? and batch_id=? and classs=? and student_Roll=?";
+    
+        try {
+            // Customize the date format as needed
+
+            ps = con.getCon().prepareStatement(sql);
+            
+            
+            System.out.println("2");
+            int year = Integer.parseInt(r_session.getText().toString().trim());
+            ps.setInt(1, year);
+
+//            ps.setInt(1, Integer.parseInt("Session_year"));
+            ps.setString(2, r_batch_id.getText().toString().trim());
+            ps.setString(3, r_class.getSelectedItem().toString().trim());
+            ps.setString(4, r_St_Roll.getText().toString().trim());
+
+            rs = ps.executeQuery();
+            
+            if(rs.next()){
+            visiableResultInput();
+            
+            }
+            else{InvisiableResultInput();}
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }//GEN-LAST:event_r_sessionKeyReleased
+
+    //dash board ar student number show korar jonno---------------------------------------
+    public void TotalStudentReport_6() {
+
+        String sql = "select count(*) from school where classs like 6";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_6 = rs.getInt("count(*)");
+                d_class_6.setText(class_6 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalStudentReport_7() {
+
+        String sql = "select count(*) from school where classs like 7";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_7 = rs.getInt("count(*)");
+                d_class_7.setText(class_7 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalStudentReport_8() {
+
+        String sql = "select count(*) from school where classs like 8";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_8 = rs.getInt("count(*)");
+                d_class_8.setText(class_8 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalStudentReport_9() {
+
+        String sql = "select count(*) from school where classs like 9";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_9 = rs.getInt("count(*)");
+                d_class_9.setText(class_9 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalStudentReport_10() {
+
+        String sql = "select count(*) from school where classs like 10";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_10 = rs.getInt("count(*)");
+                d_class_10.setText(class_10 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalPassReport_6() {
+
+        String sql = "select count(*) from resultsheet where classs=6 and grade Not like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_6 = rs.getInt("count(*)");
+                d_6_pass.setText(class_6 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalFailReport_6() {
+
+        String sql = "select count(*) from resultsheet where classs=6 and grade like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_6 = rs.getInt("count(*)");
+                d_6_fail.setText(class_6 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalPassReport_7() {
+
+        String sql = "select count(*) from resultsheet where classs=7 and grade Not like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_7 = rs.getInt("count(*)");
+                d_7_pass.setText(class_7 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalFailReport_7() {
+
+        String sql = "select count(*) from resultsheet where classs=7 and grade like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_7 = rs.getInt("count(*)");
+                d_7_fail.setText(class_7 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalPassReport_8() {
+
+        String sql = "select count(*) from resultsheet where classs=8 and grade Not like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_8 = rs.getInt("count(*)");
+                d_8_pass.setText(class_8 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalFailReport_8() {
+
+        String sql = "select count(*) from resultsheet where classs=8 and grade like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_8 = rs.getInt("count(*)");
+                d_8_fail.setText(class_8 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalPassReport_9() {
+
+        String sql = "select count(*) from resultsheet where classs=9 and grade Not like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_9 = rs.getInt("count(*)");
+                d_9_pass.setText(class_9 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalFailReport_9() {
+
+        String sql = "select count(*) from resultsheet where classs=9 and grade like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_9 = rs.getInt("count(*)");
+                d_9_fail.setText(class_9 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalPassReport_10() {
+
+        String sql = "select count(*) from resultsheet where classs=10 and grade Not like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_10 = rs.getInt("count(*)");
+                d_10_pass.setText(class_10 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void TotalFailReport_10() {
+
+        String sql = "select count(*) from resultsheet where classs=10 and grade like 'F'";
+
+        try {
+            ps = con.getCon().prepareStatement(sql);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int class_10 = rs.getInt("count(*)");
+                d_10_fail.setText(class_10 + "");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(View_DashBoard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void InvisiableResultInput(){
+       r_bangla.setVisible(false);
+       r_english.setVisible(false);
+       r_math.setVisible(false);
+       r_scince.setVisible(false);
+       r_social.setVisible(false);
+       r_islam.setVisible(false);
+    
+    }
+    
+        public void visiableResultInput(){
+       r_bangla.setVisible(true);
+       r_english.setVisible(true);
+       r_math.setVisible(true);
+       r_scince.setVisible(true);
+       r_social.setVisible(true);
+       r_islam.setVisible(true);
+    
+    }
+    
+    
 
     /**
      * @param args the command line arguments
@@ -3076,6 +4809,8 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JTabbedPane Pay_TeachersTab;
     private javax.swing.JTabbedPane Pay_home;
     private javax.swing.JTabbedPane PaymentTab;
+    private javax.swing.JTextArea Payment_student_;
+    private javax.swing.JPanel Result_sheet_panal;
     private javax.swing.JPanel St_4;
     private javax.swing.JTabbedPane St_Admition;
     private javax.swing.JPanel St_All;
@@ -3090,6 +4825,7 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JTabbedPane Staff_Home;
     private javax.swing.JTabbedPane Staff_view;
     private javax.swing.JTabbedPane StudentTab;
+    private javax.swing.JPanel Student_details_panal;
     private javax.swing.JScrollPane Table_Student;
     private javax.swing.JTabbedPane Te_ClassRutine;
     private javax.swing.JTabbedPane Te_Full_Report;
@@ -3107,14 +4843,38 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JButton btn_Image_set_;
     private javax.swing.JButton btn_R_Delete;
     private javax.swing.JButton btn_R_Reset;
+    private javax.swing.JButton btn_R_RollBack_;
     private javax.swing.JButton btn_R_save_;
     private javax.swing.JButton btn_R_update;
+    private javax.swing.JButton btn_Result_sheet_panal_Print_;
     private javax.swing.JButton btn_Save_;
+    private javax.swing.JButton btn_rs_Reset_;
+    private javax.swing.JButton btn_rs_View_;
+    private javax.swing.JButton btn_sd_Print_;
     private javax.swing.JButton btn_sd_Reset;
     private javax.swing.JButton btn_sd_View1_;
     private javax.swing.JButton btn_sd_View_;
     private javax.swing.JButton btn_sd_delete_;
-    private javax.swing.JButton btn_sd_update_;
+    private javax.swing.JButton btn_st_pay_AddCurt_;
+    private javax.swing.JButton btn_st_pay_print;
+    private javax.swing.JButton btn_st_pay_reset;
+    private javax.swing.JButton btn_st_pay_save_;
+    private javax.swing.JButton btn_st_pay_update;
+    private javax.swing.JLabel d_10_fail;
+    private javax.swing.JLabel d_10_pass;
+    private javax.swing.JLabel d_6_fail;
+    private javax.swing.JLabel d_6_pass;
+    private javax.swing.JLabel d_7_fail;
+    private javax.swing.JLabel d_7_pass;
+    private javax.swing.JLabel d_8_fail;
+    private javax.swing.JLabel d_8_pass;
+    private javax.swing.JLabel d_9_fail;
+    private javax.swing.JLabel d_9_pass;
+    private javax.swing.JLabel d_class_10;
+    private javax.swing.JLabel d_class_6;
+    private javax.swing.JLabel d_class_7;
+    private javax.swing.JLabel d_class_8;
+    private javax.swing.JLabel d_class_9;
     private javax.swing.JTabbedPane ex;
     private javax.swing.JTabbedPane ex1;
     private javax.swing.JTabbedPane ex2;
@@ -3129,7 +4889,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -3141,27 +4900,15 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -3189,6 +4936,11 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -3251,6 +5003,7 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -3278,10 +5031,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -3292,7 +5041,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
@@ -3307,7 +5055,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
@@ -3330,7 +5077,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel6;
@@ -3348,18 +5094,34 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
     private javax.swing.JPanel mainPanal;
     private javax.swing.JTabbedPane mainTab;
     private javax.swing.JPanel optionPanal;
+    private com.toedter.calendar.JDateChooser pay_st_Date;
+    private javax.swing.JCheckBox pay_st_Mon_Oct;
+    private javax.swing.JCheckBox pay_st_Mon_apr;
+    private javax.swing.JCheckBox pay_st_Mon_aug;
+    private javax.swing.JCheckBox pay_st_Mon_dec;
+    private javax.swing.JCheckBox pay_st_Mon_feb;
+    private javax.swing.JCheckBox pay_st_Mon_jan;
+    private javax.swing.JCheckBox pay_st_Mon_july;
+    private javax.swing.JCheckBox pay_st_Mon_june;
+    private javax.swing.JCheckBox pay_st_Mon_mar;
+    private javax.swing.JCheckBox pay_st_Mon_may;
+    private javax.swing.JCheckBox pay_st_Mon_nov;
+    private javax.swing.JCheckBox pay_st_Mon_sep;
+    private javax.swing.JTextField pay_st_Roll;
+    private javax.swing.JTextField pay_st_TotalFee;
+    private javax.swing.JTextField pay_st_admision;
+    private javax.swing.JTextField pay_st_batch;
+    private javax.swing.JComboBox<String> pay_st_catagory;
+    private javax.swing.JComboBox<String> pay_st_class_combo;
+    private javax.swing.JTextField pay_st_cruntAmount;
+    private javax.swing.JComboBox<String> pay_st_current_month;
+    private javax.swing.JTextField pay_st_exam_fee;
+    private javax.swing.JTextField pay_st_id;
+    private javax.swing.JTextField pay_st_session;
+    private javax.swing.JTable paymentStudentTable;
     private javax.swing.JLabel r_Serial;
     private javax.swing.JTextField r_St_Roll;
     private javax.swing.JTextField r_avarage;
@@ -3373,10 +5135,38 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JTextField r_grade;
     private javax.swing.JTextField r_islam;
     private javax.swing.JTextField r_math;
+    private javax.swing.JTextField r_passFail;
     private javax.swing.JTextField r_scince;
     private javax.swing.JTextField r_session;
     private javax.swing.JTextField r_social;
     private javax.swing.JTextField r_total;
+    private javax.swing.JLabel rs_PassFail;
+    private javax.swing.JLabel rs_bangla;
+    private javax.swing.JLabel rs_batch;
+    private javax.swing.JLabel rs_catagory;
+    private javax.swing.JLabel rs_class;
+    private javax.swing.JLabel rs_english;
+    private javax.swing.JLabel rs_gpa;
+    private javax.swing.JTextField rs_input_batch;
+    private javax.swing.JComboBox<String> rs_input_class;
+    private javax.swing.JTextField rs_input_roll;
+    private javax.swing.JTextField rs_input_session;
+    private javax.swing.JLabel rs_islam;
+    private javax.swing.JLabel rs_math;
+    private javax.swing.JLabel rs_name;
+    private javax.swing.JLabel rs_roll;
+    private javax.swing.JLabel rs_scince;
+    private javax.swing.JLabel rs_session;
+    private javax.swing.JLabel rs_social;
+    private javax.swing.JLabel rs_total;
+    private javax.swing.JLabel rsg_bangla;
+    private javax.swing.JLabel rsg_english;
+    private javax.swing.JLabel rsg_gpa;
+    private javax.swing.JLabel rsg_islam;
+    private javax.swing.JLabel rsg_math;
+    private javax.swing.JLabel rsg_scince;
+    private javax.swing.JLabel rsg_social;
+    private javax.swing.JLabel rsg_total;
     private javax.swing.JTextField s_Batch_id;
     private javax.swing.JComboBox<String> s_BloodGroup;
     private javax.swing.JComboBox<String> s_Class_combo;
@@ -3427,7 +5217,6 @@ public class View_DashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel st_admision_main_pan;
     private javax.swing.JButton st_btn_result_in;
     private javax.swing.JButton st_btn_result_out;
-    private javax.swing.JTable tableGrade;
     private javax.swing.JTable tableResultInput;
     private javax.swing.JPanel te_All;
     private javax.swing.JButton te_btn_add;
