@@ -4,7 +4,9 @@
  */
 package school_managemant_apps;
 
+import Views.LoginPage;
 import Views.View_DashBoard;
+
 
 /**
  *
@@ -16,10 +18,15 @@ public class Main_Class {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        View_DashBoard views=new View_DashBoard();
-        views.setLocationRelativeTo(null);
-        views.setVisible(true);
-        
+//        View_DashBoard views=new View_DashBoard();
+//        views.setLocationRelativeTo(null);
+//        views.setVisible(true);
+    
+        LoginPage login=new LoginPage();
+        login.setVisible(true);
+        login.setLocationRelativeTo(null);
+
+
     }
     
 }

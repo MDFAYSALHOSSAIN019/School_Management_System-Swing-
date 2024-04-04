@@ -17,12 +17,12 @@ import java.util.logging.Logger;
 public class DataBaseConnection {
     
     private Connection con=null;
-    private String url="";
+    private String url="jdbc:mysql://localhost:3306/school_manage";
     private String user="root";
     private  String password="1234";
-    private String driver="";
+    private String driver="com.mysql.cj.jdbc.Driver";
 //    com.mysql.jdbc//
-    private  Connection getCon(){
+    public Connection getCon(){
     
         try {
             Class.forName(driver);
