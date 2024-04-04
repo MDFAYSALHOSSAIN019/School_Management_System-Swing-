@@ -10,12 +10,11 @@ Introducing our Java Swing-based School Management system (SMS), a robust deskto
 
 ## The Role of Administrator is
 1. Add new Studnte, Teacher, Staff.
-2. View all the Studnte, Teacher, Staff.
-3. Register new Customer.
-4. View all Report based Customer and Date.
-5. Create Order Invoice.
-6. Print Order Invoice.
-7. View All the Orders.
+2. View all the Student, Teacher, Staff.
+3. Create Result,Routine, Fee, admit card.
+4. View all Result,Routine,admit card,Fee based Id .
+5. Invoice for Payment.
+
 
 ## Technologies used:-
 ### Front-End Development:
