@@ -1,5 +1,5 @@
 
-<!---<img src="https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/Sweing%20project%20sereenshot/1.png
+<img src="https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/Sweing%20project%20sereenshot/1.png
 ">
 # SME Management.
 Introducing our Java Swing-based School Management system (SMS), a robust desktop application designed to streamline the operations of retail Education with efficiency and ease. With its intuitive interface and powerful features, our application empowers School owners to manage Student, Teeacher, Staff All Information. From Adding new Student, Teacher, Staff All information Such as Baio data , Academic information as like Result Sheet, Class Routine, Exam Routine, Payment Admit card etc. Experience the convenience and reliability of our Java Swing-based School management system, revolutionizing the way you run your School.
