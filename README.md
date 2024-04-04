@@ -1,7 +1,7 @@
 
 <img src="https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/Sweing%20project%20sereenshot/1.png
 ">
-# SME Management.
+# SMS Project.
 Introducing our Java Swing-based School Management system (SMS), a robust desktop application designed to streamline the operations of retail Education with efficiency and ease. With its intuitive interface and powerful features, our application empowers School owners to manage Student, Teeacher, Staff All Information. From Adding new Student, Teacher, Staff All information Such as Baio data , Academic information as like Result Sheet, Class Routine, Exam Routine, Payment Admit card etc. Experience the convenience and reliability of our Java Swing-based School management system, revolutionizing the way you run your School.
 -----------------   ---------------------------------------------
 ## There are 1 users in the system
@@ -39,7 +39,7 @@ Implement secure user authentication and authorization mechanisms to control acc
 
 :pushpin: Dashboard page for Admin:
 Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
-![ Home page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/home.png)
+![ Home page]([https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/home.png](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/Sweing%20project%20sereenshot/1.png))
 
 :pushpin: Product Add/Update page for Admin:
 Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
