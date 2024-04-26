@@ -13,7 +13,7 @@ Introducing our Java Swing-based School Management system (SMS), a robust deskto
 2. View all the Student, Teacher, Staff.
 3. Create Result,Routine, Fee, admit card.
 4. View all Result,Routine,admit card,Fee based Id .
-5. Invoice for Payment.
+5. Invoice for Fees.
 
 
 ## Technologies used:-
@@ -39,50 +39,72 @@ Implement secure user authentication and authorization mechanisms to control acc
 
 :pushpin: Dashboard page for Admin:
 Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
-![ Home page](https://raw.githubusercontent.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/main/Sweing%20project%20sereenshot-20240320T162315Z-001/Sweing%20project%20sereenshot/1.png))
+![ Home page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/dashbord.jpg?raw=true))
+
 
 :pushpin: Product Add/Update page for Admin:
 Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/add.png)
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Student.jpg?raw=true)
 
-:pushpin: Purchase Product page for Admin:
-Track purchases of new inventory items, including supplier details, purchase date, quantity, and cost per unit. Set and update prices for products, allowing for flexible pricing strategies and adjustments based on market conditions or business requirements.
-![ Purchase Product page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/purchase2.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admisionForm.jpg?raw=true)
 
-:pushpin: Register or search old Customer page for Admin:
-Register new customers by capturing essential information such as name, contact details, and address for effective customer management.
-![ Order page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/order.png)
-![ Order2 page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/order2.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/view%20student.jpg?raw=true)
 
-:pushpin: Product Search for Sales:
-Effortlessly search for products within the inventory to facilitate sales transactions, ensuring quick and accurate selection for customers.
-![ Sales page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/cart2.png)
-:pushpin: Product Search for Sales:
-![ Sales page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/cart3.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20and%20staff.jpg?raw=true)
 
- :pushpin: Sales History Search:
- Easily retrieve sales history based on specified criteria such as date range and customer information, enabling efficient tracking and analysis of past transactions.
-![ Order Details page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/orderDetails.png)
-:pushpin: Sales History Search:
-![ Order Details page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/orderDetails2.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20add.jpg?raw=true)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20view.jpg?raw=true)
 
-:pushpin: Reporting and Analytics:
- Generate comprehensive reports and analytics on sales performance, inventory levels, customer trends, and others key metrics to support informed decision-making and business analysis.
-![ Sales Report page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/salesReport.png)
-:pushpin: Reporting and Analytics:
-![ customer List page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/customerList2.png)
-:pushpin: Reporting and Analytics:
-![ product Sales page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/productSales2.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine.jpg?raw=true)
 
-:pushpin: Reporting Delivery:
-Update Delivery status.
-![ delivery page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/delivery.png)
-:pushpin:  Reporting Delivery:
-![ delivery page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/delivery2.png)
-:pushpin:  Reporting Delivery:
-![ delivery page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/delivery3.png)
-:pushpin: PDF Invoice Generation:
-Generate professional-looking PDF invoices for completed sales transactions, including itemized lists of products sold, quantities, prices, taxes, and total amounts.
-![ Invoice page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/invoice-de2210cId14r95.png)
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine%20add.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20Rutine%20View.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/exam%20.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/payment.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/student%20payment.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admit%20Card.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/RESULT%20iNPUT.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Result%20Show%20.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/pdf%20result.jpg?raw=true)
+
+
 :pushpin: Invoice QR code:
 ![ qrcode page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/qrcode.png)
