@@ -106,5 +106,4 @@ Easily add new products to the shop inventory, including details such as name, d
 ![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/pdf%20result.jpg?raw=true)
 
 
-:pushpin: Invoice QR code:
-![ qrcode page](https://github.com/fatemazohor/SwingSMEMangagement/blob/main/Screenshot/qrcode.png)
+
