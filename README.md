@@ -38,72 +38,72 @@ Implement secure user authentication and authorization mechanisms to control acc
 ![ Login page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/log.jpg?raw=true)
 
 :pushpin: Dashboard page for Admin:
-Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
+Our Java Spring Boot and Angular js-based School Management system (SMS)  includes a dynamic dashboard feature.
 ![ Home page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/dashbord.jpg?raw=true))
 
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Student.jpg?raw=true)
+:pushpin:Student Activity page for Admin:
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admisionForm.jpg?raw=true)
+![ Student page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Student.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/view%20student.jpg?raw=true)
+:pushpin:student  Add page for Admin:
+Easily add new student to the School, including details .
+![ Add Student page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admisionForm.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20and%20staff.jpg?raw=true)
+:pushpin: student Update page for Admin:
+Easily add new student to the School.
+![ View Student page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/view%20student.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20add.jpg?raw=true)
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20view.jpg?raw=true)
+:pushpin: Teacher Add page for Admin:
+Easily add new Teacher.
+![ Add teacher page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20and%20staff.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine.jpg?raw=true)
+:pushpin: Teacher Add page for Admin:
+Easily add new Teacher.
+![ Add Teacher page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20add.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine%20add.jpg?raw=true)
+:pushpin: Teacher Update page for Admin:
+Easily Update the details of a Teacher.
+![ Teacher View page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/teacher%20view.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20Rutine%20View.jpg?raw=true)
+:pushpin: Class Routine Add page for Admin:
+Easily add new Class Routine.
+![ Add Class Routine page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/exam%20.jpg?raw=true)
+:pushpin: Class Routine View page for Admin:
+Easily View a Class Routine On the base on Class.
+![ View Class Routine page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20rutine%20add.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+:pushpin: Class Routine View page for Admin:
+Easily View a Class Routine On the base on Class.
+![ View Class Routine page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/class%20Rutine%20View.jpg?raw=true)
+
+![  Exam page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/exam%20.jpg?raw=true)
+
+:pushpin: Student Fee View And Fee Colllection page for Admin:
+Easily view and Query a student are due any monthly Fee.
 ![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/payment.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/student%20payment.jpg?raw=true)
+:pushpin: Student Fee View And Fee Colllection page for Admin:
+Easily view and Query a student are due any monthly Fee.
+![ Fee Collection and View page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/student%20payment.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admit%20Card.jpg?raw=true)
+:pushpin: Student Admit Card print page for Admin:
+Easily view Studnet Admit Card and Print these.
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/RESULT%20iNPUT.jpg?raw=true)
+![ Print Admit Card page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/admit%20Card.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Result%20Show%20.jpg?raw=true)
+:pushpin: Student Result Add page for Admin:
+Easily add Student Result 
+![Add student Result  page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/RESULT%20iNPUT.jpg?raw=true)
 
-:pushpin: Product Add/Update page for Admin:
-Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
-![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/pdf%20result.jpg?raw=true)
+:pushpin: Students Result View page for Admin:
+EasilyResult View.
+![ View Result page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/Result%20Show%20.jpg?raw=true)
+
+:pushpin: Student Result Details page for Admin:
+Easily Show Student Result Details One By One Print
+![Result Print page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/pdf%20result.jpg?raw=true)
 
 
 
